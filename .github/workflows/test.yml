@@ -22,4 +22,5 @@ jobs:
             test/subdir/README.md
       - run: |
           cat test/README.md
+          echo "------"
           cat test/subdir/README.md
