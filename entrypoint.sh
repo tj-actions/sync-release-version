@@ -3,7 +3,7 @@
 set -e
 
 if [[ $GITHUB_EVENT_NAME != 'release' ]]; then
-  echo "Skipping: This should only run on release.";
+  echo "Skipping: This should only run on release not '$GITHUB_EVENT_NAME'.";
   exit 0;
 fi
 
