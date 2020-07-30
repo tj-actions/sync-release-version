@@ -16,8 +16,10 @@ jobs:
         uses: ./
         id: bumpversion
         with:
+          current_version: '1.0.1'
           paths: |
-            README.md
-            subdir/README.md
-            new/subdir/README.md
-            new/subdir/subdir/README.md
+            test/README.md
+            test/subdir/README.md
+      - run:
+          cat test/README.md
+          cat test/subdir/README.md

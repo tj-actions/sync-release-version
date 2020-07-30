@@ -6,6 +6,9 @@ inputs:
     description: 'GITHUB_TOKEN or a Repo scoped PAT'
     required: true
     default: ${{ github.token }}
+  current_version:
+    description: 'The current project version'
+    required: false
   paths:
     description: 'A list of file names to search and replace versions.'
     required: true
@@ -16,6 +19,7 @@ runs:
   args:
     - ${{ inputs.token }}
     - ${{ inputs.paths }}
+    - ${{ inputs.current_version }}
 branding:
   icon: arrow-up
   color: green
