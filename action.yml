@@ -15,6 +15,7 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.token }}
+    - ${{ inputs.paths }}
 branding:
   icon: arrow-up
   color: green
