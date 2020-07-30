@@ -20,6 +20,6 @@ jobs:
           paths: |
             test/README.md
             test/subdir/README.md
-      - run:
+      - run: |
           cat test/README.md
           cat test/subdir/README.md
