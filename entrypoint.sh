@@ -9,6 +9,6 @@ FILES=$2
 
 for path in ${FILES}
 do
-   echo path
+   echo "$path"
 done
 
