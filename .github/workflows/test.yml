@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: Test bumpversion
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Bumpversion
+        uses: ./
+        id: bumpversion
+        with:
+          paths: |
+            README.md
+            subdir/README.md
+            new/subdir/README.md
+            new/subdir/subdir/README.md
