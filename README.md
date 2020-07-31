@@ -1,5 +1,5 @@
 ![CI](https://github.com/tj-actions/bumpversion/workflows/CI/badge.svg)
-![Update release version.](https://github.com/tj-actions/verify-changed-files/workflows/Update%20release%20version./badge.svg)
+![Update release version.](https://github.com/tj-actions/bumpversion/workflows/Update%20release%20version./badge.svg)
 
 bumpversion
 -----------
