@@ -23,3 +23,5 @@ do
    sed -i "s|$CURRENT_TAG|$NEW_TAG|g" "$path"
 done
 
+echo "::set-output name=new_version::$NEW_TAG"
+echo "::set-output name=old_version::$CURRENT_TAG"
