@@ -1,4 +1,4 @@
-name: Bumpversion release version.
+name: bumpversion
 description: Increases a project version with new releases.
 author: tj-actions
 inputs:
