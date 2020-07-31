@@ -2,9 +2,15 @@ name: CI
 
 on:
   push:
+    paths-ignore: 
+      - 'README.md'
+      - '**\README.md'
     branches:
       - master
   pull_request:
+    paths-ignore: 
+      - 'README.md'
+      - '**\README.md'
     branches:
       - master
 
