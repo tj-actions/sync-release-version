@@ -26,6 +26,14 @@ Update files that reference a project version with a new release number.
         echo "Upgraded from ${{ steps.bumpversion.outputs.old_version }} -> ${{ steps.bumpversion.outputs.new_version }}" 
 ```
 
+
+
+
+Real Example Usage: [sample](.github/workflows/release.yml)
+
+
+
+
 * Free software: [MIT license](LICENSE)
 
 Features
