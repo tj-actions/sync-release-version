@@ -1,5 +1,5 @@
-name: bumpversion
-description: Increases a project version with new releases.
+name: Sync release version.
+description: Update files that reference a project version with new release number.
 author: tj-actions
 inputs:
   token:

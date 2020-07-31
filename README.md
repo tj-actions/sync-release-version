@@ -3,9 +3,9 @@
 bumpversion
 -----------
 
-Increases a project version with new release version numbers.
+Sync release version.
 
-Search an replace old versions with new release tags.
+Update files that reference a project version with new release number.
 
 ```yaml
 ...
