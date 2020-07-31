@@ -1,3 +1,5 @@
+![CI](https://github.com/tj-actions/bumpversion/workflows/CI/badge.svg)
+
 bumpversion
 -----------
 
