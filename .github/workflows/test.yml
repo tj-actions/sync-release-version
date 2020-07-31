@@ -47,4 +47,14 @@ jobs:
           cat test/README.md
           echo "------"
           cat test/subdir/README.md
-          exit 1;
+          exit 1
+      - name: Validate old_version output.
+        if: steps.bumpversion.outputs.old_version != '1.0.1'
+        run: |
+          echo "Invalid previous version ${{ steps.bumpversion.outputs.old_version }}: Expected 1.0.1"
+          exit 1
+      - name: Validate new_version output.
+        if: steps.bumpversion.outputs.new_version != '1.0.2'
+        run: |
+          echo "Invalid previous version ${{ steps.bumpversion.outputs.new_version }}: Expected 1.0.2"
+          exit 1
