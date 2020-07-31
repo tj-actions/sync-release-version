@@ -1,5 +1,5 @@
-name: Simplify version upgrades with new releases.
-description: Increases a python project version with new releases.
+name: Bumpversion release version.
+description: Increases a project version with new releases.
 author: tj-actions
 inputs:
   token:
