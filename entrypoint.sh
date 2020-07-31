@@ -2,14 +2,14 @@
 
 set -e
 
-if [[ $GITHUB_EVENT_NAME != 'release' ]]; then
+if [[ $GITHUB_EVENT_NAME != 'release' && -z "$4" ]]; then
   echo "Skipping: This should only run on release not '$GITHUB_EVENT_NAME'.";
   exit 0;
 fi
 
 FILES=$2
-NEW_TAG=${GITHUB_REF/refs\/tags\//}
 CURRENT_TAG=${3:-$(git describe --abbrev=0 --tags $(git rev-list --tags --skip=1  --max-count=1))}
+NEW_TAG=${4:-GITHUB_REF/refs\/tags\//}
 
 if [[ -z $CURRENT_TAG ]]; then
   echo "Unable to determine where changes need to be updated."

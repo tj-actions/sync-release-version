@@ -9,6 +9,9 @@ inputs:
   current_version:
     description: 'The current project version'
     required: false
+  new_version:
+    description: 'The next project version'
+    required: false
   paths:
     description: 'A list of file names to search and replace versions.'
     required: true
@@ -20,6 +23,7 @@ runs:
     - ${{ inputs.token }}
     - ${{ inputs.paths }}
     - ${{ inputs.current_version }}
+    - ${{ inputs.new_version }}
 branding:
   icon: arrow-up
   color: green

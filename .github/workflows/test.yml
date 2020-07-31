@@ -17,6 +17,7 @@ jobs:
         id: bumpversion
         with:
           current_version: '1.0.1'
+          new_version: '1.0.2'
           paths: |
             test/README.md
             test/subdir/README.md
