@@ -5,7 +5,7 @@ bumpversion
 
 Sync release version.
 
-Update files that reference a project version with new release number.
+Update files that reference a project version with a new release number.
 
 ```yaml
 ...
