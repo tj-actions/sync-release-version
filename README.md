@@ -12,7 +12,7 @@ Update files that reference a project version with a new release number.
 ...
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Bumpversion release version.
         uses: tj-actions/bumpversion@v0.1a
           id: bumpversion
