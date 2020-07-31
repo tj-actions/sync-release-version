@@ -8,7 +8,7 @@ if [[ $GITHUB_EVENT_NAME != 'release' && -z "$4" ]]; then
 fi
 
 FILES=$2
-CURRENT_TAG=${3:-$(git describe --abbrev=0 --tags $(git rev-list --tags --skip=1  --max-count=1))}
+CURRENT_TAG=${3:-$(git describe --abbrev=0 --tags "$(git rev-list --tags --skip=1  --max-count=1)")}
 NEW_TAG=${4:-GITHUB_REF/refs\/tags\//}
 
 if [[ -z $CURRENT_TAG ]]; then
