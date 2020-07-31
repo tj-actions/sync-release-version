@@ -15,9 +15,10 @@ inputs:
   paths:
     description: 'A list of file names to search and replace versions.'
     required: true
-  regex:
-    description: 'Regex to match the location that need to be updated'
+  prefix:
+    description: 'The prefix to match the location that needs to be updated'
     required: false
+    default: ''
 
 runs:
   using: 'docker'
@@ -27,7 +28,7 @@ runs:
     - ${{ inputs.paths }}
     - ${{ inputs.current_version }}
     - ${{ inputs.new_version }}
-    - ${{ inputs.regex }}
+    - ${{ inputs.prefix }}
 branding:
   icon: arrow-up
   color: green
