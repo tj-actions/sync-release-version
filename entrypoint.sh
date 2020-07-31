@@ -21,7 +21,7 @@ fi
 for path in ${FILES}
 do
    echo "Replacing $CURRENT_TAG with $NEW_TAG for: $path"
-   sed -i "s|"$PREFIX$CURRENT_TAG"|$PREFIX$NEW_TAG|g" "$path"
+   sed -i "s|$PREFIX$CURRENT_TAG|$PREFIX$NEW_TAG|g" "$path"
 done
 
 echo "::set-output name=new_version::$NEW_TAG"
