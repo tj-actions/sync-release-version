@@ -56,5 +56,5 @@ jobs:
       - name: Validate new_version output.
         if: steps.bumpversion.outputs.new_version != '1.0.2'
         run: |
-          echo "Invalid previous version ${{ steps.bumpversion.outputs.new_version }}: Expected 1.0.2"
+          echo "Invalid new version ${{ steps.bumpversion.outputs.new_version }}: Expected 1.0.2"
           exit 1
