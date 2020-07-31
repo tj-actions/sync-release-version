@@ -6,6 +6,8 @@ bumpversion
 
 Sync release version.
 
+Real Example Usage: [sample](.github/workflows/release.yml)
+
 Update files that reference a project version with a new release number.
 
 ```yaml
@@ -25,11 +27,6 @@ Update files that reference a project version with a new release number.
       - run: |
         echo "Upgraded from ${{ steps.bumpversion.outputs.old_version }} -> ${{ steps.bumpversion.outputs.new_version }}" 
 ```
-
-
-
-
-Real Example Usage: [sample](.github/workflows/release.yml)
 
 
 
