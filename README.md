@@ -12,9 +12,9 @@ Update files that reference a project version with a new release number.
 ...
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v2
       - name: Bumpversion release version.
-        uses: tj-actions/bumpversion@v0.1a
+        uses: tj-actions/bumpversion@v5
           id: bumpversion
           with:
             current_version: '1.0.1'  # Omit to use git tag.
