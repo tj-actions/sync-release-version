@@ -1,9 +1,9 @@
 bumpversion
 -----------
 
-Increases a project version with new releases.
+Increases a project version with new release version numbers.
 
-Search an replace old version tag with new release tags.
+Search an replace old versions with new release tags.
 
 ```yaml
 ...
