@@ -24,5 +24,20 @@ do
    sed -i "s|$PREFIX$CURRENT_TAG|$PREFIX$NEW_TAG|g" "$path"
 done
 
+git config user.name github-actions
+git config user.email github-actions@github.com
+
+if [[ `git status --porcelain` ]]; then
+  # Changes
+  git checkout -B "upgraded-to-$NEW_TAG"
+  git add $FILES
+  git commit -m "Updraded from ${{ steps.bumpversion.outputs.old_version }} -> ${{ steps.bumpversion.outputs.new_version }}"
+  git push
+else
+  echo "No changes made."
+  exit 0
+fi
+
+
 echo "::set-output name=new_version::$NEW_TAG"
 echo "::set-output name=old_version::$CURRENT_TAG"
