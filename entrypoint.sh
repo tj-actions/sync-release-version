@@ -30,7 +30,7 @@ git config user.email github-actions@github.com
 if [[ $(git status --porcelain) ]]; then
   # Changes
   git checkout -B "upgraded-to-$NEW_TAG"
-  git add $FILES
+  git add "$FILES"
   git commit -m "Updraded from ${{ steps.bumpversion.outputs.old_version }} -> ${{ steps.bumpversion.outputs.new_version }}"
   git push
 else
