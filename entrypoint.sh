@@ -27,7 +27,7 @@ done
 git config user.name github-actions
 git config user.email github-actions@github.com
 
-if [[ `git status --porcelain` ]]; then
+if [[ $(git status --porcelain) ]]; then
   # Changes
   git checkout -B "upgraded-to-$NEW_TAG"
   git add $FILES
