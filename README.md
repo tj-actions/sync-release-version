@@ -4,6 +4,8 @@
 bumpversion
 -----------
 
+> :warning: This is currently unstable future goal would be to create a pull request based on the changes made that can be reviewed.
+
 Sync release version.
 
 Real Example Usage: [sample](.github/workflows/release.yml)
@@ -36,7 +38,14 @@ Update files that reference a project version with a new release number.
 Features
 --------
 
-* TODO
+* Updates your readme file with an up to date version of your project based on each release tag.
+
+
+
+Todo's
+------
+
+- [ ] Add support to create a pull request based on the changes to the readme
 
 
 Credits
