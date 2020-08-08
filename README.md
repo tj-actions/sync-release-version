@@ -45,7 +45,7 @@ Features
 Todo's
 ------
 
-- [ ] Add support to create a pull request based on the changes to the readme
+- [ ] Add support to create a pull request based on the changes to the README.
 
 
 Credits
