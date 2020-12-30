@@ -15,6 +15,7 @@ jobs:
         uses: tj-actions/bumpversion@v4
         id: bumpversion
         with:
+          commit: true
           prefix: 'tj-actions/bumpversion@'
           paths: |
             README.md
