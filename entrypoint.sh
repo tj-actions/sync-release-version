@@ -11,6 +11,7 @@ FILES=$2
 CURRENT_TAG=${3:-$(git describe --abbrev=0 --tags "$(git rev-list --tags --skip=1  --max-count=1)")}
 NEW_TAG=${4:-"${GITHUB_REF/refs\/tags\//}"}
 PREFIX=$5
+COMMIT=$6
 
 if [[ -z $CURRENT_TAG ]]; then
   echo "Unable to determine where changes need to be updated."
@@ -29,12 +30,18 @@ git config user.email github-actions@github.com
 git fetch --depth=1 origin "${GITHUB_BASE_REF}:${GITHUB_BASE_REF}"
 
 if [[ $(git status --porcelain) ]]; then
-  # Changes
-  git stash
-  git branch "upgrade-to-$NEW_TAG" "${GITHUB_BASE_REF}"
-  git checkout "upgrade-to-$NEW_TAG"
-  git stash pop
-  git commit -am "Updraded from $CURRENT_TAG -> $NEW_TAG"
+  if [[  "$COMMIT" -ne "true" ]]; then
+    echo "::warning::Uncommited changes found"
+    git status
+  else
+    # Changes
+    echo "Committing changes..."
+    git stash
+    git branch "upgrade-to-$NEW_TAG" "${GITHUB_BASE_REF}"
+    git checkout "upgrade-to-$NEW_TAG"
+    git stash pop
+    git commit -am "Updraded from $CURRENT_TAG -> $NEW_TAG"
+  fi
 else
   echo "No changes made."
   exit 0
