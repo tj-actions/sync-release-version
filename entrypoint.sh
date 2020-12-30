@@ -32,7 +32,6 @@ if [[ $(git status --porcelain) ]]; then
   git checkout -B "upgraded-to-$NEW_TAG"
   git add "$FILES"
   git commit -m "Updraded from ${{ steps.bumpversion.outputs.old_version }} -> ${{ steps.bumpversion.outputs.new_version }}"
-  git push
 else
   echo "No changes made."
   exit 0
