@@ -4,6 +4,8 @@
 bumpversion
 -----------
 
+> :warning: This is currently unstable future goal would be to create a pull request based on the changes made that can be reviewed.
+
 Sync release version.
 
 Real Example Usage: [sample](.github/workflows/release.yml)
@@ -16,7 +18,7 @@ Update files that reference a project version with a new release number.
     steps:
       - uses: actions/checkout@v2
       - name: Bumpversion release version.
-        uses: tj-actions/bumpversion@v5
+        uses: tj-actions/bumpversion@v6.1-alpha
           id: bumpversion
           with:
             current_version: '1.0.1'  # Omit to use git tag.
@@ -36,13 +38,20 @@ Update files that reference a project version with a new release number.
 Features
 --------
 
-* TODO
+* Updates your readme file with an up to date version of your project based on each release tag.
+
+
+
+Todo's
+------
+
+- [ ] Add support to create a pull request based on the changes made to files.
 
 
 Credits
 -------
 
-This package was created with Cookiecutter.
+This package was created with [Cookiecutter](https://github.com/cookiecutter/cookiecutter).
 
 
 
