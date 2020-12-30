@@ -15,6 +15,10 @@ inputs:
   paths:
     description: 'A list of file names to search and replace versions.'
     required: true
+  commit:
+    description: 'Commit the version upgrade changes to a branch.'
+    required: false
+    default: true
   prefix:
     description: 'The prefix to match the location that needs to be updated'
     required: false
@@ -29,6 +33,7 @@ runs:
     - ${{ inputs.current_version }}
     - ${{ inputs.new_version }}
     - ${{ inputs.prefix }}
+    - ${{ inputs.commit }}
 branding:
   icon: arrow-up
   color: green
