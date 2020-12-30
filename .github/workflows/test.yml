@@ -29,7 +29,7 @@ jobs:
         with:
           current_version: '1.0.1'
           new_version: '1.0.2'
-          commit: true
+          commit: false
           paths: |
             test/README.md
             test/subdir/README.md
