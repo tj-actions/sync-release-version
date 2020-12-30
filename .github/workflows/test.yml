@@ -29,25 +29,10 @@ jobs:
         with:
           current_version: '1.0.1'
           new_version: '1.0.2'
+          commit: true
           paths: |
             test/README.md
             test/subdir/README.md
-      - name: Verify Changed files
-        uses: tj-actions/verify-changed-files@v3
-        id: changed_files
-        with:
-          files: |
-            test/README.md
-            test/subdir/README.md
-      - name: Validate files changed.
-        if: steps.changed_files.outputs.files_changed != 'true'
-        run: |
-          echo "Expected versions changes."
-          echo "Found: \n"
-          cat test/README.md
-          echo "------"
-          cat test/subdir/README.md
-          exit 1
       - name: Validate old_version output.
         if: steps.bumpversion.outputs.old_version != '1.0.1'
         run: |
