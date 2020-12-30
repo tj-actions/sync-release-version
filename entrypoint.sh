@@ -11,7 +11,7 @@ FILES=$2
 CURRENT_TAG=${3:-$(git describe --abbrev=0 --tags "$(git rev-list --tags --skip=1  --max-count=1)")}
 NEW_TAG=${4:-"${GITHUB_REF/refs\/tags\//}"}
 PREFIX=$5
-COMMIT=$([ $6 ])
+COMMIT=$6
 
 if [[ -z $CURRENT_TAG ]]; then
   echo "Unable to determine where changes need to be updated."
