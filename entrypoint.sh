@@ -26,16 +26,15 @@ done
 
 git config user.name github-actions
 git config user.email github-actions@github.com
-git fetch --depth=1 origin ${GITHUB_BASE_REF}:${GITHUB_BASE_REF}
+git fetch --depth=1 origin "${GITHUB_BASE_REF}:${GITHUB_BASE_REF}"
 
 if [[ $(git status --porcelain) ]]; then
   # Changes
   git stash
-  git branch "upgrade-to-$NEW_TAG" ${GITHUB_BASE_REF}
+  git branch "upgrade-to-$NEW_TAG" "${GITHUB_BASE_REF}"
   git checkout "upgrade-to-$NEW_TAG"
   git stash pop
-  git add "$FILES"
-  git commit -m "Updraded from ${{ steps.bumpversion.outputs.old_version }} -> ${{ steps.bumpversion.outputs.new_version }}"
+  git commit -am "Updraded from $CURRENT_TAG -> $NEW_TAG"
 else
   echo "No changes made."
   exit 0
