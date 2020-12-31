@@ -7,6 +7,8 @@ if [[ $GITHUB_EVENT_NAME != 'release' && -z "$4" ]]; then
   exit 0;
 fi
 
+git fetch origin +refs/tags/*:refs/tags/*
+
 FILES=$2
 CURRENT_TAG=${3:-$(git describe --abbrev=0 --tags "$(git rev-list --tags --skip=1  --max-count=1)")}
 NEW_TAG=${4:-"${GITHUB_REF/refs\/tags\//}"}

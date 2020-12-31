@@ -4,9 +4,7 @@
 bumpversion
 -----------
 
-Sync release version.
-
-Real Example Usage: [sample](.github/workflows/release.yml)
+#### Sync a project release version number.
 
 Update files that reference a project version with a new release number.
 
@@ -16,7 +14,7 @@ Update files that reference a project version with a new release number.
     steps:
       - uses: actions/checkout@v2
       - name: Bumpversion release version.
-        uses: tj-actions/bumpversion@v5
+        uses: tj-actions/bumpversion@v6.8
           id: bumpversion
           with:
             current_version: '1.0.1'  # Omit to use git tag.
@@ -29,6 +27,40 @@ Update files that reference a project version with a new release number.
 ```
 
 
+### Recomended usage with [peter-evans/create-pull-request@v3](https://github.com/peter-evans/create-pull-request)
+
+```yaml
+name: Update release version.
+on:
+  release:
+    types: [published]
+
+
+jobs:
+  update-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Bumpversion release version.
+        uses: tj-actions/bumpversion@v6.8
+        id: bumpversion
+        with:
+          commit: true
+          prefix: 'tj-actions/bumpversion@'
+          paths: |
+            README.md
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          base: "master"
+          title: "Upgraded to ${{ steps.bumpversion.outputs.new_version }}"
+          branch: "upgrade-to-${{ steps.bumpversion.outputs.new_version }}"
+          commit-message: "Upgraded from ${{ steps.bumpversion.outputs.old_version }} -> ${{ steps.bumpversion.outputs.new_version }}"
+```
+
+
+
+
 
 
 * Free software: [MIT license](LICENSE)
@@ -36,13 +68,14 @@ Update files that reference a project version with a new release number.
 Features
 --------
 
-* TODO
+* Updates your readme file with an up to date version of your project based on each release tag.
+
 
 
 Credits
 -------
 
-This package was created with Cookiecutter.
+This package was created with [Cookiecutter](https://github.com/cookiecutter/cookiecutter).
 
 
 
