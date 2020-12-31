@@ -17,11 +17,7 @@ jobs:
           prefix: 'tj-actions/bumpversion@'
           paths: |
             README.md
-      - name: pull-request-${{ steps.bumpversion.outputs.new_branch_name }}
-        uses: repo-sync/pull-request@v2
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
         with:
-          source_branch: "${{ steps.bumpversion.outputs.new_branch_name }}"
-          destination_branch: "master"
-          pr_title: "Upgraded from ${{ steps.bumpversion.outputs.old_version }} -> ${{ steps.bumpversion.outputs.new_version }}" 
-          pr_reviewer: "jackton1"
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: ""
