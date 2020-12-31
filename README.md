@@ -4,11 +4,7 @@
 bumpversion
 -----------
 
-> :warning: This is currently unstable future goal would be to create a pull request based on the changes made that can be reviewed.
-
-Sync release version.
-
-Real Example Usage: [sample](.github/workflows/release.yml)
+#### Sync project release version number.
 
 Update files that reference a project version with a new release number.
 
@@ -31,6 +27,35 @@ Update files that reference a project version with a new release number.
 ```
 
 
+### Recomended usage with [peter-evans/create-pull-request@v3](https://github.com/peter-evans/create-pull-request)
+
+```yaml
+name: Update release version.
+on:
+  release:
+    types: [published]
+
+
+jobs:
+  update-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Bumpversion release version.
+        uses: tj-actions/bumpversion@v4
+        id: bumpversion
+        with:
+          commit: true
+          prefix: 'tj-actions/bumpversion@'
+          paths: |
+            README.md
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+```
+
+
+
+
 
 
 * Free software: [MIT license](LICENSE)
@@ -40,12 +65,6 @@ Features
 
 * Updates your readme file with an up to date version of your project based on each release tag.
 
-
-
-Todo's
-------
-
-- [ ] Add support to create a pull request based on the changes made to files.
 
 
 Credits
