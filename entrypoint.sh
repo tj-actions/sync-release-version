@@ -7,7 +7,6 @@ if [[ $GITHUB_EVENT_NAME != 'release' && -z "$4" ]]; then
   exit 0;
 fi
 
-git fetch --depth=1 origin "${GITHUB_BASE_REF}:${GITHUB_BASE_REF}"
 git fetch origin +refs/tags/*:refs/tags/*
 
 FILES=$2
@@ -39,10 +38,7 @@ if [[ $(git status --porcelain) ]]; then
   else
     # Changes
     echo "Committing changes..."
-    git stash
-    git branch "upgrade-to-$NEW_TAG" "${GITHUB_BASE_REF}"
-    git checkout "upgrade-to-$NEW_TAG"
-    git stash pop
+    git checkout -B "upgrade-to-$NEW_TAG"
     git commit -am "Updraded from $CURRENT_TAG -> $NEW_TAG"
   fi
 else
