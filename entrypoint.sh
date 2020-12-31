@@ -14,6 +14,7 @@ CURRENT_TAG=${3:-$(git describe --abbrev=0 --tags "$(git rev-list --tags --skip=
 NEW_TAG=${4:-"${GITHUB_REF/refs\/tags\//}"}
 PREFIX=$5
 COMMIT=$6
+NEW_BRANCH="upgrade-to-$NEW_TAG"
 
 if [[ -z $CURRENT_TAG ]]; then
   echo "Unable to determine where changes need to be updated."
@@ -38,7 +39,7 @@ if [[ $(git status --porcelain) ]]; then
   else
     # Changes
     echo "Committing changes..."
-    git checkout -B "upgrade-to-$NEW_TAG"
+    git checkout -B "$NEW_BRANCH"
     git commit -am "Updraded from $CURRENT_TAG -> $NEW_TAG"
   fi
 else
@@ -49,3 +50,4 @@ fi
 
 echo "::set-output name=new_version::$NEW_TAG"
 echo "::set-output name=old_version::$CURRENT_TAG"
+echo "::set-output name=new_branch_name::$NEW_BRANCH"
