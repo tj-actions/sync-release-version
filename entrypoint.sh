@@ -7,6 +7,9 @@ if [[ $GITHUB_EVENT_NAME != 'release' && -z "$4" ]]; then
   exit 0;
 fi
 
+git fetch --depth=1 origin "${GITHUB_BASE_REF}:${GITHUB_BASE_REF}"
+git fetch origin +refs/tags/*:refs/tags/*
+
 FILES=$2
 CURRENT_TAG=${3:-$(git describe --abbrev=0 --tags "$(git rev-list --tags --skip=1  --max-count=1)")}
 NEW_TAG=${4:-"${GITHUB_REF/refs\/tags\//}"}
@@ -27,7 +30,7 @@ done
 
 git config user.name github-actions
 git config user.email github-actions@github.com
-git fetch --depth=1 origin "${GITHUB_BASE_REF}:${GITHUB_BASE_REF}"
+
 
 if [[ $(git status --porcelain) ]]; then
   if [[  "$COMMIT" != "true" ]]; then
