@@ -10,7 +10,6 @@ Update files that reference a project version with a new release number.
 
 ```yaml
 ...
-
     steps:
       - uses: actions/checkout@v2
       - name: Bumpversion release version.
@@ -58,8 +57,32 @@ jobs:
           commit-message: "Upgraded from ${{ steps.bumpversion.outputs.old_version }} -> ${{ steps.bumpversion.outputs.new_version }}"
 ```
 
+Example
+-------
+
+Creating a new release `v6.7 -> v6.8` using the recommended configuration above.
+
+#### BEFORE
+
+`README.md`
+```yaml
+...
+    steps:
+      - uses: actions/checkout@v2
+      - name: Bumpversion release version.
+        uses: tj-actions/bumpversion@v6.7
+```
 
 
+#### AFTER
+`README.md`
+```yaml
+...
+    steps:
+      - uses: actions/checkout@v2
+      - name: Bumpversion release version.
+        uses: tj-actions/bumpversion@v6.8
+```
 
 
 
