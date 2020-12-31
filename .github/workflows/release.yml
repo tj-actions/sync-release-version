@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Bumpversion release version.
-        uses: tj-actions/bumpversion@v6.1-beta
+        uses: tj-actions/bumpversion@v6.3
         id: bumpversion
         with:
           commit: true
