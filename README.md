@@ -46,7 +46,7 @@ jobs:
         id: bumpversion
         with:
           commit: true
-          prefix: 'tj-actions/bumpversion@'
+          pattern: 'tj-actions/bumpversion@'
           paths: |
             README.md
       - name: Create Pull Request
