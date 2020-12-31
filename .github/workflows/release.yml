@@ -13,7 +13,7 @@ jobs:
         uses: tj-actions/bumpversion@v6.8
         id: bumpversion
         with:
-          prefix: 'tj-actions/bumpversion@'
+          pattern: 'tj-actions/bumpversion@'
           paths: |
             README.md
       - name: Create Pull Request

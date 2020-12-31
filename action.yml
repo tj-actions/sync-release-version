@@ -28,7 +28,7 @@ runs:
     - ${{ inputs.paths }}
     - ${{ inputs.current_version }}
     - ${{ inputs.new_version }}
-    - ${{ inputs.prefix }}
+    - ${{ inputs.pattern }}
 branding:
   icon: arrow-up
   color: green
