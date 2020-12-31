@@ -51,6 +51,11 @@ jobs:
             README.md
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
+        with:
+          base: "master"
+          title: "Upgraded to ${{ steps.bumpversion.outputs.new_version }}"
+          branch: "upgrade-to-${{ steps.bumpversion.outputs.new_version }}"
+          commit-message: "Upgraded from ${{ steps.bumpversion.outputs.old_version }} -> ${{ steps.bumpversion.outputs.new_version }}"
 ```
 
 
