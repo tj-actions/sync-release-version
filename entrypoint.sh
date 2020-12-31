@@ -13,8 +13,6 @@ FILES=$2
 CURRENT_TAG=${3:-$(git describe --abbrev=0 --tags "$(git rev-list --tags --skip=1  --max-count=1)")}
 NEW_TAG=${4:-"${GITHUB_REF/refs\/tags\//}"}
 PREFIX=$5
-COMMIT=$6
-NEW_BRANCH="upgrade-to-$NEW_TAG"
 
 if [[ -z $CURRENT_TAG ]]; then
   echo "Unable to determine where changes need to be updated."
@@ -28,26 +26,5 @@ do
    sed -i "s|$PREFIX$CURRENT_TAG|$PREFIX$NEW_TAG|g" "$path"
 done
 
-git config user.name github-actions
-git config user.email github-actions@github.com
-
-
-if [[ $(git status --porcelain) ]]; then
-  if [[  "$COMMIT" != "true" ]]; then
-    echo "::warning::Uncommited changes found"
-    git status
-  else
-    # Changes
-    echo "Committing changes..."
-    git checkout -B "$NEW_BRANCH"
-    git commit -am "Updraded from $CURRENT_TAG -> $NEW_TAG"
-  fi
-else
-  echo "No changes made."
-  exit 0
-fi
-
-
 echo "::set-output name=new_version::$NEW_TAG"
 echo "::set-output name=old_version::$CURRENT_TAG"
-echo "::set-output name=new_branch_name::$NEW_BRANCH"
