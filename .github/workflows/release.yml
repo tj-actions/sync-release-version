@@ -13,11 +13,13 @@ jobs:
         uses: tj-actions/bumpversion@v6.5
         id: bumpversion
         with:
-          commit: true
           prefix: 'tj-actions/bumpversion@'
           paths: |
             README.md
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
-          commit-message: ""
+          base: "master"
+          branch: "upgrade-to-${{ steps.bumpversion.outputs.new_version }}"
+          commit-message: "Upgraded from ${{ steps.bumpversion.outputs.old_version }} -> ${{ steps.bumpversion.outputs.new_version }}"
+          reviewers: "jackton1"
