@@ -85,6 +85,28 @@ Creating a new release `v6.7 -> v6.8` using the recommended configuration above.
 ```
 
 
+Inputs
+------
+
+|   Input           |    type       |  required     |  default                | description                                                     |
+|:-----------------:|:-------------:|:-------------:|:-----------------------:|:---------------------------------------------------------------:|
+| `token`           |  `string`     |    `true`     | `${{ github.token }}`   | 'GITHUB_TOKEN or a Repo scoped PAT'                             |
+| `current_version` |  `string`     |    `false`    |                         | The current project version <br /> (Defualts to: The last git tag)     |
+| `new_version`     |  `string`     |    `false`    |                         | The next project version <br /> (Defaults to: The new git tag)         |
+| `paths`           |  `array`      |    `true`     |                         | A list of file names to search <br /> and replace versions.            |
+| `pattern`         |  `string`     |    `false`    |    `''`                 | The pattern to match the location <br /> that needs to be updated      |
+
+
+
+Output
+------
+
+|   Output         |    type     |  example              | description                   |
+|:----------------:|:-----------:|:---------------------:|:-----------------------------:|
+| `new_version`    |  `string`   |    `1.2.1`            |  The current project version |
+| `old_version`    |  `string`   |    `1.2.0`            |  The previous project version |
+
+
 
 * Free software: [MIT license](LICENSE)
 
