@@ -7,10 +7,10 @@ inputs:
     required: true
     default: ${{ github.token }}
   current_version:
-    description: 'The current project version'
+    description: 'The previous project version'
     required: false
   new_version:
-    description: 'The next project version'
+    description: 'The current project version'
     required: false
   paths:
     description: 'A list of file names to search and replace versions.'
@@ -19,6 +19,11 @@ inputs:
     description: 'The pattern to match the location that needs to be updated'
     required: false
     default: ''
+outputs:
+  new_version:
+    description: 'The current project version'
+  old_version:
+    description: 'The previous project version'
 
 runs:
   using: 'docker'
