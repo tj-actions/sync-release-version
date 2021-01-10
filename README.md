@@ -4,6 +4,9 @@
 bumpversion
 -----------
 
+Usage
+-----
+
 #### Sync a project release version number.
 
 Update files that reference a project version with a new release number.
