@@ -65,7 +65,7 @@ Example
 
 ![Sample](./Sample.png)
 
-Creating a new release `v6.7 -> v6.8` using the recommended configuration above.
+Creating a new release `v6.8 -> v7` using the recommended configuration above.
 
 #### BEFORE
 
@@ -75,9 +75,8 @@ Creating a new release `v6.7 -> v6.8` using the recommended configuration above.
     steps:
       - uses: actions/checkout@v2
       - name: Bumpversion release version.
-        uses: tj-actions/bumpversion@v6.7
+        uses: tj-actions/bumpversion@v6.8
 ```
-
 
 #### AFTER
 `README.md`
@@ -86,7 +85,7 @@ Creating a new release `v6.7 -> v6.8` using the recommended configuration above.
     steps:
       - uses: actions/checkout@v2
       - name: Bumpversion release version.
-        uses: tj-actions/bumpversion@v6.8
+        uses: tj-actions/bumpversion@v7
 ```
 
 
