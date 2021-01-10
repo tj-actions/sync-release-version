@@ -86,7 +86,7 @@ Creating a new release `v6.8 -> v7` using the recommended configuration above.
     steps:
       - uses: actions/checkout@v2
       - name: Bumpversion release version.
-        uses: tj-actions/bumpversion@v7.1
+        uses: tj-actions/bumpversion@v7
 ```
 
 
@@ -118,8 +118,12 @@ Output
 Features
 --------
 
-* Updates your readme file with an up to date version of your project based on each release tag.
+* Modifies files with an up to date version of your project based on each release tag.
 
+
+Known Issues
+------------
+:warning: Updating files is naive and can be error prune to ignore certain lines from getting updated ensure the version used doesn't match either the current oor previous versions.
 
 
 Credits
