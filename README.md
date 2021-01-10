@@ -64,7 +64,9 @@ jobs:
 Example
 -------
 
-Creating a new release `v6.7 -> v7` using the recommended configuration above.
+![Sample](./Sample.png)
+
+Creating a new release `v6.8 -> v7` using the recommended configuration above.
 
 #### BEFORE
 
