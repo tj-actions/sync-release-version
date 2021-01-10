@@ -16,7 +16,7 @@ Update files that reference a project version with a new release number.
     steps:
       - uses: actions/checkout@v2
       - name: Bumpversion release version.
-        uses: tj-actions/bumpversion@v7
+        uses: tj-actions/bumpversion@v7.1
           id: bumpversion
           with:
             current_version: '1.0.1'  # Omit to use git tag.
@@ -44,7 +44,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Bumpversion release version.
-        uses: tj-actions/bumpversion@v7
+        uses: tj-actions/bumpversion@v7.1
         id: bumpversion
         with:
           pattern: 'tj-actions/bumpversion@'
@@ -86,7 +86,7 @@ Creating a new release `v6.8 -> v7` using the recommended configuration above.
     steps:
       - uses: actions/checkout@v2
       - name: Bumpversion release version.
-        uses: tj-actions/bumpversion@v7
+        uses: tj-actions/bumpversion@v7.1
 ```
 
 
