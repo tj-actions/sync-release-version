@@ -57,7 +57,7 @@ jobs:
           title: "Upgraded to ${{ steps.bumpversion.outputs.new_version }}"
           branch: "upgrade-to-${{ steps.bumpversion.outputs.new_version }}"
           commit-message: "Upgraded from ${{ steps.bumpversion.outputs.old_version }} -> ${{ steps.bumpversion.outputs.new_version }}"
-          body: "View [CHANGES](https://github.com/${{ github.repository }}/compare/v${{ steps.bumpversion.outputs.old_version }}...v${{ steps.bumpversion.outputs.new_version }})"
+          body: "View [CHANGES](https://github.com/${{ github.repository }}/compare/${{ steps.bumpversion.outputs.old_version }}...${{ steps.bumpversion.outputs.new_version }})"
           reviewers: "jackton1"
 ```
 
