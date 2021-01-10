@@ -63,6 +63,8 @@ jobs:
 Example
 -------
 
+![Sample](./Sample.png)
+
 Creating a new release `v6.7 -> v6.8` using the recommended configuration above.
 
 #### BEFORE
