@@ -16,7 +16,6 @@ jobs:
           pattern: 'tj-actions/bumpversion@'
           paths: |
             README.md
-            .github/workflows/sync-release-version.yml
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
