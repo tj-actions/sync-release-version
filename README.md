@@ -123,7 +123,7 @@ Features
 
 Known Issues
 ------------
-:warning: Updating files is naive and can be error prune to ignore certain lines from getting updated ensure the version used doesn't match either the current or previous version.
+> To ignore certain lines from getting updated ensure the version used doesn't match either the current or previous version.
 
 
 Credits
