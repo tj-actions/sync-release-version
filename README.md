@@ -95,7 +95,7 @@ Inputs
 
 |   Input           |    type       |  required     |  default                | description                                                     |
 |:-----------------:|:-------------:|:-------------:|:-----------------------:|:---------------------------------------------------------------:|
-| `token`           |  `string`     |    `true`     | `${{ github.token }}`   | GITHUB_TOKEN or <br /> a Repo scoped [Personal Access Token](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token)                            |
+| `token`           |  `string`     |    `true`     | `${{ github.token }}`   | [GITHUB_TOKEN](https://docs.github.com/en/free-pro-team@latest/actions/reference/authentication-in-a-workflow#using-the-github_token-in-a-workflow) or <br /> a Repo scoped [Personal Access Token](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token)                            |
 | `current_version` |  `string`     |    `false`    |                         | The current project version <br /> (Defualts to: The last git tag)     |
 | `new_version`     |  `string`     |    `false`    |                         | The next project version <br /> (Defaults to: The new git tag)         |
 | `paths`           |  `array`      |    `true`     |                         | A list of file names to search <br /> and replace versions.            |
