@@ -15,6 +15,8 @@ Update files that reference a project version with a new release number.
 ...
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
       - name: Bumpversion release version.
         uses: tj-actions/bumpversion@v7.1
           id: bumpversion
@@ -43,6 +45,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - name: Bumpversion release version.
         uses: tj-actions/bumpversion@v7.1
         id: bumpversion
@@ -75,6 +79,8 @@ Creating a new release `v6.8 -> v7` using the recommended configuration above.
 ...
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - name: Bumpversion release version.
         uses: tj-actions/bumpversion@v6.8
 ```
@@ -85,6 +91,8 @@ Creating a new release `v6.8 -> v7` using the recommended configuration above.
 ...
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - name: Bumpversion release version.
         uses: tj-actions/bumpversion@v7
 ```
