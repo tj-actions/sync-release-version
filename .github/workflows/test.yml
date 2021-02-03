@@ -9,6 +9,12 @@ on:
       - master
 
 jobs:
+  new:
+    runs-on: ubuntu-latest
+    name: Test
+    steps:
+      - run: | 
+          echo ${{ toJSON(github.event.issue) }}
   test:
     runs-on: ubuntu-latest
     name: Test bumpversion
