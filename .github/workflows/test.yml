@@ -14,7 +14,7 @@ jobs:
     name: Test
     steps:
       - run: | 
-          echo "${{ toJSON(github.event.issue.labels.*.name) }}"
+          echo "${{ toJSON(github.event.pull_request.labels.*.name) }}"
   test:
     runs-on: ubuntu-latest
     name: Test bumpversion
