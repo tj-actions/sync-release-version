@@ -1,6 +1,11 @@
 name: CI
 
 on:
+  label:
+    types:
+      - created
+      - edited
+      - deleted
   push:
     branches:
       - master
