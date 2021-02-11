@@ -6,6 +6,7 @@ on:
       - created
       - edited
       - deleted
+
 jobs:
   new:
     runs-on: ubuntu-latest
