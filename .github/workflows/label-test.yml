@@ -1,0 +1,15 @@
+name: Label Test
+
+on:
+  label:
+    types:
+      - created
+      - edited
+      - deleted
+jobs:
+  new:
+    runs-on: ubuntu-latest
+    name: Test
+    steps:
+      - run: | 
+          echo "${{ toJSON(github.event) }}"
