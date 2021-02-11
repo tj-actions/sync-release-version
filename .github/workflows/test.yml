@@ -1,6 +1,11 @@
 name: CI
 
 on:
+  label:
+    types:
+      - created
+      - edited
+      - deleted
   push:
     branches:
       - master
@@ -9,6 +14,12 @@ on:
       - master
 
 jobs:
+  new:
+    runs-on: ubuntu-latest
+    name: Test
+    steps:
+      - run: | 
+          echo "${{ toJSON(contains(github.event.pull_request.labels.*.name, 'dependencies')) }}"
   test:
     runs-on: ubuntu-latest
     name: Test bumpversion
