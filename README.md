@@ -18,7 +18,7 @@ Update files that reference a project version with a new release number.
         with:
           fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
       - name: Bumpversion release version.
-        uses: tj-actions/bumpversion@v7.2
+        uses: tj-actions/bumpversion@v8
           id: bumpversion
           with:
             current_version: '1.0.1'  # Omit to use git tag.
@@ -48,7 +48,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Bumpversion release version.
-        uses: tj-actions/bumpversion@v7.2
+        uses: tj-actions/bumpversion@v8
         id: bumpversion
         with:
           pattern: 'tj-actions/bumpversion@'
