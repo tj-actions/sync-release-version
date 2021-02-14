@@ -10,10 +10,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Bumpversion release version.
-        uses: tj-actions/bumpversion@v7.1
+        uses: tj-actions/sync-release-version@v8
         id: bumpversion
         with:
-          pattern: 'tj-actions/bumpversion@'
+          pattern: 'tj-actions/sync-release-version@'
           paths: |
             README.md
       - name: Create Pull Request
