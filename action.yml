@@ -36,4 +36,4 @@ runs:
     - ${{ inputs.pattern }}
 branding:
   icon: arrow-up
-  color: green
+  color: white
