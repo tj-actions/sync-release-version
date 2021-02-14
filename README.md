@@ -1,8 +1,8 @@
-[![CI](https://github.com/tj-actions/bumpversion/workflows/CI/badge.svg)](https://github.com/tj-actions/bumpversion/actions?query=workflow%3ACI)
-[![Update release version.](https://github.com/tj-actions/bumpversion/workflows/Update%20release%20version./badge.svg)](https://github.com/tj-actions/bumpversion/actions?query=workflow%3A%22Update+release+version.%22)
+[![CI](https://github.com/tj-actions/sync-release-version/workflows/CI/badge.svg)](https://github.com/tj-actions/sync-release-version/actions?query=workflow%3ACI)
+[![Update release version.](https://github.com/tj-actions/sync-release-version/workflows/Update%20release%20version./badge.svg)](https://github.com/tj-actions/sync-release-version/actions?query=workflow%3A%22Update+release+version.%22)
 
-bumpversion
------------
+sync-release-version
+--------------------
 
 Usage
 -----
@@ -17,9 +17,9 @@ Update files that reference a project version with a new release number.
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
-      - name: Bumpversion release version.
-        uses: tj-actions/bumpversion@v7.2
-          id: bumpversion
+      - name: Sync release version.
+        uses: tj-actions/sync-release-version@v7.2
+          id: sync-release-version
           with:
             current_version: '1.0.1'  # Omit to use git tag.
             new_version: '1.0.2'  # Omit when running on a release action.
@@ -27,7 +27,7 @@ Update files that reference a project version with a new release number.
               README.md
               test/subdir/README.md
       - run: |
-        echo "Upgraded from ${{ steps.bumpversion.outputs.old_version }} -> ${{ steps.bumpversion.outputs.new_version }}" 
+        echo "Upgraded from ${{ steps.sync-release-version.outputs.old_version }} -> ${{ steps.sync-release-version.outputs.new_version }}" 
 ```
 
 
@@ -47,21 +47,21 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - name: Bumpversion release version.
-        uses: tj-actions/bumpversion@v7.2
-        id: bumpversion
+      - name: Sync release version.
+        uses: tj-actions/sync-release-version@v7.2
+        id: sync-release-version
         with:
-          pattern: 'tj-actions/bumpversion@'
+          pattern: 'tj-actions/sync-release-version@'
           paths: |
             README.md
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
           base: "master"
-          title: "Upgraded to ${{ steps.bumpversion.outputs.new_version }}"
-          branch: "upgrade-to-${{ steps.bumpversion.outputs.new_version }}"
-          commit-message: "Upgraded from ${{ steps.bumpversion.outputs.old_version }} -> ${{ steps.bumpversion.outputs.new_version }}"
-          body: "View [CHANGES](https://github.com/${{ github.repository }}/compare/${{ steps.bumpversion.outputs.old_version }}...${{ steps.bumpversion.outputs.new_version }})"
+          title: "Upgraded to ${{ steps.sync-release-version.outputs.new_version }}"
+          branch: "upgrade-to-${{ steps.sync-release-version.outputs.new_version }}"
+          commit-message: "Upgraded from ${{ steps.sync-release-version.outputs.old_version }} -> ${{ steps.sync-release-version.outputs.new_version }}"
+          body: "View [CHANGES](https://github.com/${{ github.repository }}/compare/${{ steps.sync-release-version.outputs.old_version }}...${{ steps.sync-release-version.outputs.new_version }})"
           reviewers: "jackton1"
 ```
 
@@ -81,8 +81,8 @@ Creating a new release `v6.8 -> v7` using the recommended configuration above.
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - name: Bumpversion release version.
-        uses: tj-actions/bumpversion@v6.8
+      - name: Sync release version.
+        uses: tj-actions/sync-release-version@v6.8
 ```
 
 #### AFTER
@@ -93,8 +93,8 @@ Creating a new release `v6.8 -> v7` using the recommended configuration above.
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - name: Bumpversion release version.
-        uses: tj-actions/bumpversion@v7
+      - name: Sync release version.
+        uses: tj-actions/sync-release-version@v7
 ```
 
 
@@ -144,7 +144,7 @@ This package was created with [Cookiecutter](https://github.com/cookiecutter/coo
 Report Bugs
 -----------
 
-Report bugs at https://github.com/tj-actions/bumpversion/issues.
+Report bugs at https://github.com/tj-actions/sync-release-version/issues.
 
 If you are reporting a bug, please include:
 

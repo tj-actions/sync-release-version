@@ -1,4 +1,4 @@
-* bumpversion:
+* sync-release-version:
 
 ### Description
 
