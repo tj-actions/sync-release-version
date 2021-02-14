@@ -1,4 +1,4 @@
-[![CI](https://github.com/tj-actions/bumpversion/workflows/CI/badge.svg)](https://github.com/tj-actions/bumpversion/actions?query=workflow%3ACI)
+[![CI](https://github.com/tj-actions/sync-release-version/workflows/CI/badge.svg)](https://github.com/tj-actions/bumpversion/actions?query=workflow%3ACI)
 [![Update release version.](https://github.com/tj-actions/bumpversion/workflows/Update%20release%20version./badge.svg)](https://github.com/tj-actions/bumpversion/actions?query=workflow%3A%22Update+release+version.%22)
 
 bumpversion
