@@ -18,7 +18,7 @@ Update files that reference a project version with a new release number.
         with:
           fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
       - name: Sync release version.
-        uses: tj-actions/sync-release-version@v7.2
+        uses: tj-actions/sync-release-version@v8
           id: sync-release-version
           with:
             current_version: '1.0.1'  # Omit to use git tag.
@@ -48,7 +48,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Sync release version.
-        uses: tj-actions/sync-release-version@v7.2
+        uses: tj-actions/sync-release-version@v8
         id: sync-release-version
         with:
           pattern: 'tj-actions/sync-release-version@'
