@@ -11,15 +11,15 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    name: Test bumpversion
+    name: Test sync-release-version
     steps:
       - name: Checkout
         uses: actions/checkout@v2
       - name: shellcheck
         uses: reviewdog/action-shellcheck@v1
-      - name: Bumpversion
+      - name: Sync release Version
         uses: ./
-        id: bumpversion
+        id: sync-release-version
         with:
           current_version: '1.0.1'
           new_version: '1.0.2'
@@ -43,12 +43,12 @@ jobs:
           cat test/subdir/README.md
           exit 1
       - name: Validate old_version output.
-        if: steps.bumpversion.outputs.old_version != '1.0.1'
+        if: steps.sync-release-version.outputs.old_version != '1.0.1'
         run: |
-          echo "Invalid previous version ${{ steps.bumpversion.outputs.old_version }}: Expected 1.0.1"
+          echo "Invalid previous version ${{ steps.sync-release-version.outputs.old_version }}: Expected 1.0.1"
           exit 1
       - name: Validate new_version output.
-        if: steps.bumpversion.outputs.new_version != '1.0.2'
+        if: steps.sync-release-version.outputs.new_version != '1.0.2'
         run: |
-          echo "Invalid new version ${{ steps.bumpversion.outputs.new_version }}: Expected 1.0.2"
+          echo "Invalid new version ${{ steps.sync-release-version.outputs.new_version }}: Expected 1.0.2"
           exit 1
