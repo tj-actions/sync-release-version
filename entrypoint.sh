@@ -15,8 +15,8 @@ NEW_TAG=${4:-"${GITHUB_REF/refs\/tags\//}"}
 PATTERN=$5
 
 if [[ -z $CURRENT_TAG ]]; then
-  echo "Unable to determine where changes need to be updated."
-  echo "Please create a initial release before running this action."
+  echo "::warning::Unable to determine where changes need to be updated"
+  echo "::warning::Please create a initial release before running this action."
   exit 0;
 fi
 
