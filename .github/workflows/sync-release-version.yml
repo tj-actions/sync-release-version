@@ -16,8 +16,8 @@ jobs:
           pattern: 'tj-actions/sync-release-version@'
           paths: |
             README.md
-            - name: Generate CHANGELOG
-      - uses: tj-actions/github-changelog-generator@v1.3
+      - name: Generate CHANGELOG
+        uses: tj-actions/github-changelog-generator@v1.3
         with:
           output: 'HISTORY.md'
       - name: Create Pull Request
