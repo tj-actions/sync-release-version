@@ -1,7 +1,181 @@
-History
--------
+# Changelog
 
-v0.1a (2020-07-30)
-------------------
+## [v8.3](https://github.com/tj-actions/sync-release-version/tree/v8.3) (2021-03-25)
 
-* Initial Release.
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v8.2...v8.3)
+
+## [v8.2](https://github.com/tj-actions/sync-release-version/tree/v8.2) (2021-03-25)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v8.1...v8.2)
+
+**Merged pull requests:**
+
+- Upgraded to [\#38](https://github.com/tj-actions/sync-release-version/pull/38) ([jackton1](https://github.com/jackton1))
+- Update tj-actions/verify-changed-files action to v5 [\#37](https://github.com/tj-actions/sync-release-version/pull/37) ([renovate[bot]](https://github.com/apps/renovate))
+
+## [v8.1](https://github.com/tj-actions/sync-release-version/tree/v8.1) (2021-03-25)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v8...v8.1)
+
+**Implemented enhancements:**
+
+- Support repos without an existing tag  [\#25](https://github.com/tj-actions/sync-release-version/issues/25)
+
+**Merged pull requests:**
+
+- Configure Renovate [\#36](https://github.com/tj-actions/sync-release-version/pull/36) ([renovate[bot]](https://github.com/apps/renovate))
+- Return the new tag each time an initial release is made. [\#35](https://github.com/tj-actions/sync-release-version/pull/35) ([jackton1](https://github.com/jackton1))
+- Bump alpine from 3.13.1 to 3.13.2 [\#34](https://github.com/tj-actions/sync-release-version/pull/34) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Update entrypoint.sh [\#32](https://github.com/tj-actions/sync-release-version/pull/32) ([jackton1](https://github.com/jackton1))
+- Update sync-release-version.yml [\#30](https://github.com/tj-actions/sync-release-version/pull/30) ([jackton1](https://github.com/jackton1))
+- Upgraded to v8 [\#29](https://github.com/tj-actions/sync-release-version/pull/29) ([jackton1](https://github.com/jackton1))
+
+## [v8](https://github.com/tj-actions/sync-release-version/tree/v8) (2021-02-14)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v7.2...v8)
+
+**Fixed bugs:**
+
+- Update test.yml [\#27](https://github.com/tj-actions/sync-release-version/pull/27) ([jackton1](https://github.com/jackton1))
+- Update test.yml [\#26](https://github.com/tj-actions/sync-release-version/pull/26) ([jackton1](https://github.com/jackton1))
+
+**Merged pull requests:**
+
+- Upgraded to v7.2 [\#24](https://github.com/tj-actions/sync-release-version/pull/24) ([jackton1](https://github.com/jackton1))
+
+## [v7.2](https://github.com/tj-actions/sync-release-version/tree/v7.2) (2021-01-31)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v7.1...v7.2)
+
+**Implemented enhancements:**
+
+- Update label-test.yml [\#28](https://github.com/tj-actions/sync-release-version/pull/28) ([jackton1](https://github.com/jackton1))
+
+**Merged pull requests:**
+
+- Ignore exit code [\#23](https://github.com/tj-actions/sync-release-version/pull/23) ([jackton1](https://github.com/jackton1))
+- Bump alpine from 3.13.0 to 3.13.1 [\#22](https://github.com/tj-actions/sync-release-version/pull/22) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Bump alpine from 3.12 to 3.13.0 [\#20](https://github.com/tj-actions/sync-release-version/pull/20) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Upgraded to v7.1 [\#19](https://github.com/tj-actions/sync-release-version/pull/19) ([jackton1](https://github.com/jackton1))
+
+## [v7.1](https://github.com/tj-actions/sync-release-version/tree/v7.1) (2021-01-10)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v7...v7.1)
+
+**Closed issues:**
+
+- Document Inputs and outputs [\#12](https://github.com/tj-actions/sync-release-version/issues/12)
+
+**Merged pull requests:**
+
+- Upgraded to v7 [\#17](https://github.com/tj-actions/sync-release-version/pull/17) ([github-actions[bot]](https://github.com/apps/github-actions))
+
+## [v7](https://github.com/tj-actions/sync-release-version/tree/v7) (2021-01-10)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v6.8...v7)
+
+**Closed issues:**
+
+- Add support for creating a pull request. [\#8](https://github.com/tj-actions/sync-release-version/issues/8)
+
+**Merged pull requests:**
+
+- Remove paths-ignore [\#15](https://github.com/tj-actions/sync-release-version/pull/15) ([jackton1](https://github.com/jackton1))
+- Updated outputs [\#14](https://github.com/tj-actions/sync-release-version/pull/14) ([jackton1](https://github.com/jackton1))
+- Changes by create-pull-request action [\#11](https://github.com/tj-actions/sync-release-version/pull/11) ([github-actions[bot]](https://github.com/apps/github-actions))
+- Switch prefix to use pattern. [\#7](https://github.com/tj-actions/sync-release-version/pull/7) ([jackton1](https://github.com/jackton1))
+
+## [v6.8](https://github.com/tj-actions/sync-release-version/tree/v6.8) (2020-12-31)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v6.7...v6.8)
+
+**Merged pull requests:**
+
+- Update release.yml [\#10](https://github.com/tj-actions/sync-release-version/pull/10) ([jackton1](https://github.com/jackton1))
+
+## [v6.7](https://github.com/tj-actions/sync-release-version/tree/v6.7) (2020-12-31)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v6.6...v6.7)
+
+## [v6.6](https://github.com/tj-actions/sync-release-version/tree/v6.6) (2020-12-31)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v6.5...v6.6)
+
+## [v6.5](https://github.com/tj-actions/sync-release-version/tree/v6.5) (2020-12-31)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v6.4...v6.5)
+
+**Merged pull requests:**
+
+- Update README.md [\#13](https://github.com/tj-actions/sync-release-version/pull/13) ([jackton1](https://github.com/jackton1))
+- Update entrypoint.sh [\#9](https://github.com/tj-actions/sync-release-version/pull/9) ([jackton1](https://github.com/jackton1))
+
+## [v6.4](https://github.com/tj-actions/sync-release-version/tree/v6.4) (2020-12-31)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v6.3...v6.4)
+
+## [v6.3](https://github.com/tj-actions/sync-release-version/tree/v6.3) (2020-12-31)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v6.2...v6.3)
+
+## [v6.2](https://github.com/tj-actions/sync-release-version/tree/v6.2) (2020-12-31)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v6.1-beta...v6.2)
+
+## [v6.1-beta](https://github.com/tj-actions/sync-release-version/tree/v6.1-beta) (2020-12-31)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v6.1-alpha...v6.1-beta)
+
+**Merged pull requests:**
+
+- Update entrypoint.sh [\#6](https://github.com/tj-actions/sync-release-version/pull/6) ([jackton1](https://github.com/jackton1))
+
+## [v6.1-alpha](https://github.com/tj-actions/sync-release-version/tree/v6.1-alpha) (2020-07-31)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v5...v6.1-alpha)
+
+**Merged pull requests:**
+
+- Update README.md [\#5](https://github.com/tj-actions/sync-release-version/pull/5) ([jackton1](https://github.com/jackton1))
+
+## [v5](https://github.com/tj-actions/sync-release-version/tree/v5) (2020-07-31)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v4...v5)
+
+**Merged pull requests:**
+
+- Update action.yml [\#4](https://github.com/tj-actions/sync-release-version/pull/4) ([jackton1](https://github.com/jackton1))
+
+## [v4](https://github.com/tj-actions/sync-release-version/tree/v4) (2020-07-31)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v3...v4)
+
+## [v3](https://github.com/tj-actions/sync-release-version/tree/v3) (2020-07-31)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v2...v3)
+
+## [v2](https://github.com/tj-actions/sync-release-version/tree/v2) (2020-07-31)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v1...v2)
+
+## [v1](https://github.com/tj-actions/sync-release-version/tree/v1) (2020-07-31)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v0.1b...v1)
+
+## [v0.1b](https://github.com/tj-actions/sync-release-version/tree/v0.1b) (2020-07-31)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v0.1a...v0.1b)
+
+## [v0.1a](https://github.com/tj-actions/sync-release-version/tree/v0.1a) (2020-07-31)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/ddb19d5d014f43383a404533967180f60d47a572...v0.1a)
+
+**Merged pull requests:**
+
+- Updated test. [\#3](https://github.com/tj-actions/sync-release-version/pull/3) ([jackton1](https://github.com/jackton1))
+- Updated test. [\#2](https://github.com/tj-actions/sync-release-version/pull/2) ([jackton1](https://github.com/jackton1))
+- Fixed script warnings. [\#1](https://github.com/tj-actions/sync-release-version/pull/1) ([jackton1](https://github.com/jackton1))
+
+
+
+\* *This Changelog was automatically generated by [github_changelog_generator](https://github.com/github-changelog-generator/github-changelog-generator)*
