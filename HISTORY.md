@@ -1,5 +1,17 @@
 # Changelog
 
+## [Unreleased](https://github.com/tj-actions/sync-release-version/tree/HEAD)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v8.4...HEAD)
+
+**Merged pull requests:**
+
+- Upgraded to [\#39](https://github.com/tj-actions/sync-release-version/pull/39) ([jackton1](https://github.com/jackton1))
+
+## [v8.4](https://github.com/tj-actions/sync-release-version/tree/v8.4) (2021-03-25)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v8.3...v8.4)
+
 ## [v8.3](https://github.com/tj-actions/sync-release-version/tree/v8.3) (2021-03-25)
 
 [Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v8.2...v8.3)
@@ -34,6 +46,10 @@
 
 [Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v7.2...v8)
 
+**Implemented enhancements:**
+
+- Update label-test.yml [\#28](https://github.com/tj-actions/sync-release-version/pull/28) ([jackton1](https://github.com/jackton1))
+
 **Fixed bugs:**
 
 - Update test.yml [\#27](https://github.com/tj-actions/sync-release-version/pull/27) ([jackton1](https://github.com/jackton1))
@@ -46,10 +62,6 @@
 ## [v7.2](https://github.com/tj-actions/sync-release-version/tree/v7.2) (2021-01-31)
 
 [Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v7.1...v7.2)
-
-**Implemented enhancements:**
-
-- Update label-test.yml [\#28](https://github.com/tj-actions/sync-release-version/pull/28) ([jackton1](https://github.com/jackton1))
 
 **Merged pull requests:**
 
@@ -80,8 +92,8 @@
 
 **Merged pull requests:**
 
-- Remove paths-ignore [\#15](https://github.com/tj-actions/sync-release-version/pull/15) ([jackton1](https://github.com/jackton1))
 - Updated outputs [\#14](https://github.com/tj-actions/sync-release-version/pull/14) ([jackton1](https://github.com/jackton1))
+- Update README.md [\#13](https://github.com/tj-actions/sync-release-version/pull/13) ([jackton1](https://github.com/jackton1))
 - Changes by create-pull-request action [\#11](https://github.com/tj-actions/sync-release-version/pull/11) ([github-actions[bot]](https://github.com/apps/github-actions))
 - Switch prefix to use pattern. [\#7](https://github.com/tj-actions/sync-release-version/pull/7) ([jackton1](https://github.com/jackton1))
 
@@ -107,7 +119,7 @@
 
 **Merged pull requests:**
 
-- Update README.md [\#13](https://github.com/tj-actions/sync-release-version/pull/13) ([jackton1](https://github.com/jackton1))
+- Remove paths-ignore [\#15](https://github.com/tj-actions/sync-release-version/pull/15) ([jackton1](https://github.com/jackton1))
 - Update entrypoint.sh [\#9](https://github.com/tj-actions/sync-release-version/pull/9) ([jackton1](https://github.com/jackton1))
 
 ## [v6.4](https://github.com/tj-actions/sync-release-version/tree/v6.4) (2020-12-31)
