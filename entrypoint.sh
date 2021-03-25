@@ -17,6 +17,8 @@ PATTERN=$5
 if [[ -z $CURRENT_TAG ]]; then
   echo "::warning::Unable to determine where changes need to be updated"
   echo "::warning::Please create a initial release before running this action."
+  echo "::set-output name=new_version::$NEW_TAG"
+  echo "::set-output name=old_version::$NEW_TAG"
   exit 0;
 fi
 
