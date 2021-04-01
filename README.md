@@ -15,6 +15,8 @@ Helpful Reasources
 - https://www.regextester.com/111539
 - https://www.tutorialspoint.com/unix/unix-regular-expressions.htm
 
+> NOTE: This example assumes a post release operation i.e changes are made to a README after a new version is releaased.
+
 Usage
 -----
 
