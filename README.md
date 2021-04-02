@@ -8,7 +8,7 @@ Problem
 With multiple files that need to be updated each time a new version of your software is released.
 
 
-`sync-release-version` makes this process less complex by using [sed's](https://www.gnu.org/software/sed/manual/sed.html) regex pattern to match the sections in the specified files that needs to be updated.
+`sync-release-version` makes this process less complex by using [sed's](https://www.gnu.org/software/sed/manual/sed.html) regex pattern to match the lines in the specified files that needs to be updated.
 
 Helpful Resources
 ------------------
