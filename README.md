@@ -22,7 +22,8 @@ Usage
 
 Update files that reference a project version with a new release number.
 
-> NOTE: This example assumes a post release operation i.e changes are made to a README after a new version is releaased.
+> NOTE: ⚠️
+> * This example assumes a post release operation i.e changes are made to a README after a new version is releaased.
 
 ```yaml
 ...
