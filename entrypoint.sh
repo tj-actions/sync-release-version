@@ -8,8 +8,6 @@ if [[ $GITHUB_EVENT_NAME != 'release' && -z "$4" ]]; then
 fi
 
 TOKEN=$1
-REPOSITORY=$6
-
 
 git remote set-url origin "https://$TOKEN@github.com/$GITHUB_REPOSITORY"
 
