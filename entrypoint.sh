@@ -11,7 +11,7 @@ TOKEN=$1
 REPOSITORY=$6
 
 
-git remote set-url origin "https://$TOKEN@github.com/$REPOSITORY"
+git remote set-url origin "https://$TOKEN@github.com/$GITHUB_REPOSITORY"
 
 git fetch origin +refs/tags/*:refs/tags/*
 
