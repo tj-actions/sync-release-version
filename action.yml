@@ -34,7 +34,6 @@ runs:
     - ${{ inputs.current_version }}
     - ${{ inputs.new_version }}
     - ${{ inputs.pattern }}
-    - ${{ github.repository }}
 branding:
   icon: arrow-up
   color: white
