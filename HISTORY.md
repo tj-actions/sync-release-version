@@ -1,5 +1,23 @@
 # Changelog
 
+## [v8.6](https://github.com/tj-actions/sync-release-version/tree/v8.6) (2021-05-08)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v8.5...v8.6)
+
+**Closed issues:**
+
+- Dependency Dashboard [\#49](https://github.com/tj-actions/sync-release-version/issues/49)
+
+**Merged pull requests:**
+
+- Update tj-actions/github-changelog-generator action to v1.8 [\#53](https://github.com/tj-actions/sync-release-version/pull/53) ([renovate[bot]](https://github.com/apps/renovate))
+- Bump tj-actions/sync-release-version from v8 to v8.5 [\#52](https://github.com/tj-actions/sync-release-version/pull/52) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Upgrade to GitHub-native Dependabot [\#51](https://github.com/tj-actions/sync-release-version/pull/51) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Update tj-actions/github-changelog-generator action to v1.6 [\#50](https://github.com/tj-actions/sync-release-version/pull/50) ([renovate[bot]](https://github.com/apps/renovate))
+- Update alpine Docker tag to v3.13.5 [\#47](https://github.com/tj-actions/sync-release-version/pull/47) ([renovate[bot]](https://github.com/apps/renovate))
+- Update tj-actions/verify-changed-files action to v6 [\#44](https://github.com/tj-actions/sync-release-version/pull/44) ([renovate[bot]](https://github.com/apps/renovate))
+- Upgraded to v8.5 [\#43](https://github.com/tj-actions/sync-release-version/pull/43) ([jackton1](https://github.com/jackton1))
+
 ## [v8.5](https://github.com/tj-actions/sync-release-version/tree/v8.5) (2021-04-02)
 
 [Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v8.4...v8.5)
@@ -69,6 +87,7 @@
 **Merged pull requests:**
 
 - Ignore exit code [\#23](https://github.com/tj-actions/sync-release-version/pull/23) ([jackton1](https://github.com/jackton1))
+- Bump alpine from 3.13.0 to 3.13.1 [\#22](https://github.com/tj-actions/sync-release-version/pull/22) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 - Bump alpine from 3.12 to 3.13.0 [\#20](https://github.com/tj-actions/sync-release-version/pull/20) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 - Upgraded to v7.1 [\#19](https://github.com/tj-actions/sync-release-version/pull/19) ([jackton1](https://github.com/jackton1))
 
@@ -106,7 +125,6 @@
 
 **Merged pull requests:**
 
-- Bump alpine from 3.13.0 to 3.13.1 [\#22](https://github.com/tj-actions/sync-release-version/pull/22) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 - Update release.yml [\#10](https://github.com/tj-actions/sync-release-version/pull/10) ([jackton1](https://github.com/jackton1))
 
 ## [v6.7](https://github.com/tj-actions/sync-release-version/tree/v6.7) (2020-12-31)
