@@ -7,6 +7,12 @@ if [[ $GITHUB_EVENT_NAME != 'release' && -z "$4" ]]; then
   exit 0;
 fi
 
+TOKEN=$1
+REPOSITORY=$6
+
+
+git remote set-url origin "https://$TOKEN@github.com/$REPOSITORY"
+
 git fetch origin +refs/tags/*:refs/tags/*
 
 FILES=$2
