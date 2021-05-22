@@ -36,6 +36,7 @@ Update files that reference a project version with a new release number.
         uses: tj-actions/sync-release-version@v8.6
           id: sync-release-version
           with:
+            pattern: 'version='
             current_version: '1.0.1'  # Omit to use git tag.
             new_version: '1.0.2'  # Omit when running on a release action.
             paths: |
