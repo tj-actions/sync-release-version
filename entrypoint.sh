@@ -21,9 +21,12 @@ PATTERN=$5
 if [[ -z $CURRENT_TAG ]]; then
   echo "::warning::Initial release detected no updates would be made to specified files."
   echo "::warning::Setting new_version and old_version to $NEW_TAG."
+  echo "::set-output name=is_initial_release::true"
   echo "::set-output name=new_version::$NEW_TAG"
   echo "::set-output name=old_version::$NEW_TAG"
   exit 0;
+else
+  echo "::set-output name=is_initial_release::false"
 fi
 
 for path in ${FILES}
