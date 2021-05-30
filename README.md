@@ -132,6 +132,7 @@ Output
 
 |   Output         |    type     |  example              | description                   |
 |:----------------:|:-----------:|:---------------------:|:-----------------------------:|
+| `is_initial_release`    |  `string`   |    `true` OR `false`   |  Boolean string indicating that it's an initial release. |
 | `new_version`    |  `string`   |    `1.2.1`            |  The current project version |
 | `old_version`    |  `string`   |    `1.2.0`            |  The previous project version |
 
