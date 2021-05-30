@@ -1,12 +1,40 @@
 # Changelog
 
-## [v8.6](https://github.com/tj-actions/sync-release-version/tree/v8.6) (2021-05-08)
+## [Unreleased](https://github.com/tj-actions/sync-release-version/tree/HEAD)
 
-[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v8.5...v8.6)
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v8.7...HEAD)
+
+**Closed issues:**
+
+- Add support for returning a boolean when a tag is the first release. [\#46](https://github.com/tj-actions/sync-release-version/issues/46)
+
+## [v8.7](https://github.com/tj-actions/sync-release-version/tree/v8.7) (2021-05-30)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v8.6...v8.7)
 
 **Closed issues:**
 
 - Dependency Dashboard [\#49](https://github.com/tj-actions/sync-release-version/issues/49)
+- Convert to composite action. [\#33](https://github.com/tj-actions/sync-release-version/issues/33)
+
+**Merged pull requests:**
+
+- Return boolean true for initial release [\#66](https://github.com/tj-actions/sync-release-version/pull/66) ([jackton1](https://github.com/jackton1))
+- Update pascalgn/automerge-action action to v0.14.2 [\#65](https://github.com/tj-actions/sync-release-version/pull/65) ([renovate[bot]](https://github.com/apps/renovate))
+- Bump peter-evans/create-pull-request from 3.9.2 to 3.10.0 [\#64](https://github.com/tj-actions/sync-release-version/pull/64) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Update tj-actions/verify-changed-files action to v6.2 [\#63](https://github.com/tj-actions/sync-release-version/pull/63) ([renovate[bot]](https://github.com/apps/renovate))
+- Update cirrus-actions/rebase action to v1.5 [\#62](https://github.com/tj-actions/sync-release-version/pull/62) ([renovate[bot]](https://github.com/apps/renovate))
+- Bump peter-evans/create-pull-request from 3.9.1 to 3.9.2 [\#61](https://github.com/tj-actions/sync-release-version/pull/61) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump reviewdog/action-shellcheck from 1 to 1.5 [\#60](https://github.com/tj-actions/sync-release-version/pull/60) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump actions/checkout from 2 to 2.3.4 [\#59](https://github.com/tj-actions/sync-release-version/pull/59) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump peter-evans/create-pull-request from 3 to 3.9.1 [\#58](https://github.com/tj-actions/sync-release-version/pull/58) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump tj-actions/verify-changed-files from v6 to v6.1 [\#56](https://github.com/tj-actions/sync-release-version/pull/56) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Update tj-actions/sync-release-version action to v8.6 [\#55](https://github.com/tj-actions/sync-release-version/pull/55) ([renovate[bot]](https://github.com/apps/renovate))
+- Upgraded to v8.6 [\#54](https://github.com/tj-actions/sync-release-version/pull/54) ([jackton1](https://github.com/jackton1))
+
+## [v8.6](https://github.com/tj-actions/sync-release-version/tree/v8.6) (2021-05-08)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v8.5...v8.6)
 
 **Merged pull requests:**
 
