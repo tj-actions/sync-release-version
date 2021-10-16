@@ -14,11 +14,11 @@ git remote set-url origin "https://$TOKEN@github.com/$GITHUB_REPOSITORY"
 git fetch origin +refs/tags/*:refs/tags/*
 
 FILES=$2
-CURRENT_TAG=${3:-$(git describe --abbrev=0 --tags "$(git rev-list --tags --skip=1  --max-count=1)" || true)}
+TAG=$(git describe --abbrev=0 --tags "$(git rev-list --tags --skip=1  --max-count=1 2>&1)" 2>&1) && exit_status=$? || exit_status=$?
 NEW_TAG=${4:-"${GITHUB_REF/refs\/tags\//}"}
 PATTERN=$5
 
-if [[ -z $CURRENT_TAG ]]; then
+if [[ $exit_status -ne 0 ]]; then
   echo "::warning::Initial release detected no updates would be made to specified files."
   echo "::warning::Setting new_version and old_version to $NEW_TAG."
   echo "::set-output name=is_initial_release::true"
@@ -28,6 +28,8 @@ if [[ -z $CURRENT_TAG ]]; then
 else
   echo "::set-output name=is_initial_release::false"
 fi
+
+CURRENT_TAG=${3:-"$TAG"}
 
 for path in ${FILES}
 do
