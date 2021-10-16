@@ -1,12 +1,36 @@
 # Changelog
 
-## [Unreleased](https://github.com/tj-actions/sync-release-version/tree/HEAD)
+## [v9](https://github.com/tj-actions/sync-release-version/tree/v9) (2021-10-16)
 
-[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v8.7...HEAD)
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v8.7...v9)
 
 **Closed issues:**
 
+- Dependency Dashboard [\#49](https://github.com/tj-actions/sync-release-version/issues/49)
 - Add support for returning a boolean when a tag is the first release. [\#46](https://github.com/tj-actions/sync-release-version/issues/46)
+
+**Merged pull requests:**
+
+- Fixed bug with initial tags [\#88](https://github.com/tj-actions/sync-release-version/pull/88) ([jackton1](https://github.com/jackton1))
+- Update actions/checkout action to v2.3.5 [\#87](https://github.com/tj-actions/sync-release-version/pull/87) ([renovate[bot]](https://github.com/apps/renovate))
+- Update tj-actions/verify-changed-files action to v8 [\#86](https://github.com/tj-actions/sync-release-version/pull/86) ([renovate[bot]](https://github.com/apps/renovate))
+- Updated README.md [\#85](https://github.com/tj-actions/sync-release-version/pull/85) ([jackton1](https://github.com/jackton1))
+- Update reviewdog/action-shellcheck action to v1.9 [\#84](https://github.com/tj-actions/sync-release-version/pull/84) ([renovate[bot]](https://github.com/apps/renovate))
+- Update pascalgn/automerge-action action to v0.14.3 [\#83](https://github.com/tj-actions/sync-release-version/pull/83) ([renovate[bot]](https://github.com/apps/renovate))
+- Update alpine Docker tag to v3.14.2 [\#82](https://github.com/tj-actions/sync-release-version/pull/82) ([renovate[bot]](https://github.com/apps/renovate))
+- Update peter-evans/create-pull-request action to v3.10.1 [\#81](https://github.com/tj-actions/sync-release-version/pull/81) ([renovate[bot]](https://github.com/apps/renovate))
+- Update tj-actions/remark action to v1.7 [\#80](https://github.com/tj-actions/sync-release-version/pull/80) ([renovate[bot]](https://github.com/apps/renovate))
+- Update alpine Docker tag to v3.14.1 [\#79](https://github.com/tj-actions/sync-release-version/pull/79) ([renovate[bot]](https://github.com/apps/renovate))
+- Update reviewdog/action-shellcheck action to v1.7 [\#78](https://github.com/tj-actions/sync-release-version/pull/78) ([renovate[bot]](https://github.com/apps/renovate))
+- Update codacy/codacy-analysis-cli-action action to v4 [\#77](https://github.com/tj-actions/sync-release-version/pull/77) ([renovate[bot]](https://github.com/apps/renovate))
+- Update codacy/codacy-analysis-cli-action action to v3 [\#76](https://github.com/tj-actions/sync-release-version/pull/76) ([renovate[bot]](https://github.com/apps/renovate))
+- Update reviewdog/action-shellcheck action to v1.6 [\#74](https://github.com/tj-actions/sync-release-version/pull/74) ([renovate[bot]](https://github.com/apps/renovate))
+- Bump tj-actions/verify-changed-files from 6.2 to 7 [\#73](https://github.com/tj-actions/sync-release-version/pull/73) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Update tj-actions/verify-changed-files action to v7 [\#72](https://github.com/tj-actions/sync-release-version/pull/72) ([renovate[bot]](https://github.com/apps/renovate))
+- Bump alpine from 3.13.5 to 3.14.0 [\#71](https://github.com/tj-actions/sync-release-version/pull/71) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Updated README.md [\#69](https://github.com/tj-actions/sync-release-version/pull/69) ([jackton1](https://github.com/jackton1))
+- Update tj-actions/sync-release-version action to v8.7 [\#68](https://github.com/tj-actions/sync-release-version/pull/68) ([renovate[bot]](https://github.com/apps/renovate))
+- Upgraded to v8.7 [\#67](https://github.com/tj-actions/sync-release-version/pull/67) ([jackton1](https://github.com/jackton1))
 
 ## [v8.7](https://github.com/tj-actions/sync-release-version/tree/v8.7) (2021-05-30)
 
@@ -14,7 +38,6 @@
 
 **Closed issues:**
 
-- Dependency Dashboard [\#49](https://github.com/tj-actions/sync-release-version/issues/49)
 - Convert to composite action. [\#33](https://github.com/tj-actions/sync-release-version/issues/33)
 
 **Merged pull requests:**
