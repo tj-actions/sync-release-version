@@ -7,7 +7,7 @@
 
 ## Problem
 
-With multiple files that need to be updated each time a new version of your software is released.
+With multiple files that need to be updated each time a new released is created.
 
 `sync-release-version` makes this process less complex by using a regex pattern to match the lines in the specified files that needs to be updated.
 
@@ -31,7 +31,8 @@ Update files that reference a project version with a new release number.
     steps:
       - uses: actions/checkout@v2
         with:
-          fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
+          fetch-depth: 0 # otherwise, you will fail to push refs to dest repo
+
       - name: Sync release version.
         uses: tj-actions/sync-release-version@v9
           id: sync-release-version
@@ -42,6 +43,7 @@ Update files that reference a project version with a new release number.
             paths: |
               README.md
               test/subdir/README.md
+
       - run: |
         echo "Upgraded from ${{ steps.sync-release-version.outputs.old_version }} -> ${{ steps.sync-release-version.outputs.new_version }}" 
 ```
@@ -62,6 +64,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
+ 
       - name: Sync release version.
         uses: tj-actions/sync-release-version@v9
         id: sync-release-version
@@ -69,6 +72,7 @@ jobs:
           pattern: 'tj-actions/sync-release-version@'
           paths: |
             README.md
+ 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
