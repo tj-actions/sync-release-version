@@ -11,9 +11,9 @@ SERVER_URL=$(echo "$GITHUB_SERVER_URL" | awk -F/ '{print $3}')
 
 echo "Setting up 'temp_sync_release_version' remote..."
 
-git ls-remote --exit-code temp_sync_release_version 1>/dev/null 2>&1 && exit_status=$? || exit_status=$?
+git ls-remote --exit-code temp_sync_release_version 1>/dev/null 2>&1 && remote_exit_status=$? || remote_exit_status=$?
 
-if [[ $exit_status -ne 0 ]]; then
+if [[ $remote_exit_status -ne 0 ]]; then
   echo "No 'temp_sync_release_version' remote found"
   echo "Creating 'temp_sync_release_version' remote..."
   git remote remove temp_sync_release_version 2>/dev/null || true
@@ -26,7 +26,7 @@ git fetch temp_sync_release_version +refs/tags/*:refs/tags/*
 
 FILES=$INPUT_FILES
 NEW_TAG=${INPUT_NEW_VERSION:-"${GITHUB_REF/refs\/tags\//}"}
-CURRENT_TAG=$INPUT_CURRENT_VERSION
+CURRENT_TAG=$INPUT_CURRENT_VERSION && exit_status=$? || exit_status=$?
 PATTERN=$INPUT_PATTERN
 
 if [[ -z "$CURRENT_TAG" ]]; then
