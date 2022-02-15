@@ -2,7 +2,7 @@
 
 set -e
 
-if [[ $GITHUB_EVENT_NAME != 'release' && -z "$4" ]]; then
+if [[ $GITHUB_EVENT_NAME != 'release' && -z $INPUT_CURRENT_VERSION ]]; then
   echo "Skipping: This should only run on release not '$GITHUB_EVENT_NAME'.";
   exit 0;
 fi
@@ -25,9 +25,14 @@ fi
 git fetch temp_sync_release_version +refs/tags/*:refs/tags/*
 
 FILES=$INPUT_FILES
-TAG=$(git describe --abbrev=0 --tags "$(git rev-list --tags --skip=1  --max-count=1 2>&1)" 2>&1) && exit_status=$? || exit_status=$?
-NEW_TAG=${4:-"${GITHUB_REF/refs\/tags\//}"}
+NEW_TAG=${INPUT_NEW_VERSION:-"${GITHUB_REF/refs\/tags\//}"}
+CURRENT_TAG=$INPUT_CURRENT_VERSION
 PATTERN=$INPUT_PATTERN
+
+if [[ -z "$CURRENT_TAG" ]]; then
+  TAG=$(git describe --abbrev=0 --tags "$(git rev-list --tags --skip=1  --max-count=1 2>&1)" 2>&1) && exit_status=$? || exit_status=$?
+  CURRENT_TAG=$TAG
+fi
 
 if [[ $exit_status -ne 0 ]]; then
   echo "::warning::Initial release detected no updates would be made to specified files."
@@ -39,8 +44,6 @@ if [[ $exit_status -ne 0 ]]; then
 else
   echo "::set-output name=is_initial_release::false"
 fi
-
-CURRENT_TAG=${3:-"$TAG"}
 
 for path in ${FILES}
 do
