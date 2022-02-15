@@ -1,12 +1,46 @@
 # Changelog
 
+## [v11](https://github.com/tj-actions/sync-release-version/tree/v11) (2022-02-15)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v10...v11)
+
+## [v10](https://github.com/tj-actions/sync-release-version/tree/v10) (2022-02-15)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v9...v10)
+
+**Closed issues:**
+
+- Dependency Dashboard [\#49](https://github.com/tj-actions/sync-release-version/issues/49)
+
+**Merged pull requests:**
+
+- Update reviewdog/action-shellcheck action to v1.14 [\#108](https://github.com/tj-actions/sync-release-version/pull/108) ([renovate[bot]](https://github.com/apps/renovate))
+- Update peter-evans/create-pull-request action to v3.12.1 [\#107](https://github.com/tj-actions/sync-release-version/pull/107) ([renovate[bot]](https://github.com/apps/renovate))
+- Update tj-actions/remark action to v2.3 [\#106](https://github.com/tj-actions/sync-release-version/pull/106) ([renovate[bot]](https://github.com/apps/renovate))
+- Update tj-actions/remark action to v2 [\#105](https://github.com/tj-actions/sync-release-version/pull/105) ([renovate[bot]](https://github.com/apps/renovate))
+- Update tj-actions/github-changelog-generator action to v1.11 [\#104](https://github.com/tj-actions/sync-release-version/pull/104) ([renovate[bot]](https://github.com/apps/renovate))
+- Update tj-actions/github-changelog-generator action to v1.10 [\#103](https://github.com/tj-actions/sync-release-version/pull/103) ([renovate[bot]](https://github.com/apps/renovate))
+- Update reviewdog/action-shellcheck action to v1.13 [\#102](https://github.com/tj-actions/sync-release-version/pull/102) ([renovate[bot]](https://github.com/apps/renovate))
+- Update peter-evans/create-pull-request action to v3.12.0 [\#101](https://github.com/tj-actions/sync-release-version/pull/101) ([renovate[bot]](https://github.com/apps/renovate))
+- Updated README.md [\#100](https://github.com/tj-actions/sync-release-version/pull/100) ([jackton1](https://github.com/jackton1))
+- Update alpine Docker tag to v3.15.0 [\#99](https://github.com/tj-actions/sync-release-version/pull/99) ([renovate[bot]](https://github.com/apps/renovate))
+- Add a Codacy badge to README.md [\#98](https://github.com/tj-actions/sync-release-version/pull/98) ([codacy-badger](https://github.com/codacy-badger))
+- Update reviewdog/action-shellcheck action to v1.12 [\#97](https://github.com/tj-actions/sync-release-version/pull/97) ([renovate[bot]](https://github.com/apps/renovate))
+- Update reviewdog/action-shellcheck action to v1.11 [\#96](https://github.com/tj-actions/sync-release-version/pull/96) ([renovate[bot]](https://github.com/apps/renovate))
+- Update alpine Docker tag to v3.14.3 [\#95](https://github.com/tj-actions/sync-release-version/pull/95) ([renovate[bot]](https://github.com/apps/renovate))
+- Update reviewdog/action-shellcheck action to v1.10 [\#94](https://github.com/tj-actions/sync-release-version/pull/94) ([renovate[bot]](https://github.com/apps/renovate))
+- Update peter-evans/create-pull-request action to v3.11.0 [\#93](https://github.com/tj-actions/sync-release-version/pull/93) ([renovate[bot]](https://github.com/apps/renovate))
+- Updated README.md [\#92](https://github.com/tj-actions/sync-release-version/pull/92) ([jackton1](https://github.com/jackton1))
+- Update actions/checkout action to v2.4.0 [\#91](https://github.com/tj-actions/sync-release-version/pull/91) ([renovate[bot]](https://github.com/apps/renovate))
+- Bump tj-actions/sync-release-version from 8.7 to 9 [\#90](https://github.com/tj-actions/sync-release-version/pull/90) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Upgraded to v9 [\#89](https://github.com/tj-actions/sync-release-version/pull/89) ([jackton1](https://github.com/jackton1))
+
 ## [v9](https://github.com/tj-actions/sync-release-version/tree/v9) (2021-10-16)
 
 [Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v8.7...v9)
 
 **Closed issues:**
 
-- Dependency Dashboard [\#49](https://github.com/tj-actions/sync-release-version/issues/49)
 - Add support for returning a boolean when a tag is the first release. [\#46](https://github.com/tj-actions/sync-release-version/issues/46)
 
 **Merged pull requests:**
