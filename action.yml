@@ -19,21 +19,36 @@ inputs:
     description: 'The pattern to match the location that needs to be updated'
     required: false
     default: ''
+
 outputs:
   new_version:
     description: 'The current project version'
+    value: ${{ steps.sync-release-version.outputs.new_version }}
   old_version:
     description: 'The previous project version'
+    value: ${{ steps.sync-release-version.outputs.old_version }}
 
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
-  args:
-    - ${{ inputs.token }}
-    - ${{ inputs.paths }}
-    - ${{ inputs.current_version }}
-    - ${{ inputs.new_version }}
-    - ${{ inputs.pattern }}
+  using: 'composite'
+  steps:
+    - run: |
+        bash $GITHUB_ACTION_PATH/entrypoint.sh
+      id: sync-release-version
+      shell: bash
+      env:
+        GITHUB_SERVER_URL: ${{ github.server_url }}
+        GITHUB_REPOSITORY: ${{ github.repository }}
+        GITHUB_REF: ${{ github.ref }}
+        GITHUB_ACTION_PATH: ${{ github.action_path }}
+        GITHUB_EVENT_NAME: ${{ github.event_name }}
+        # INPUT_<VARIABLE_NAME> is not available in Composite run steps
+        # https://github.community/t/input-variable-name-is-not-available-in-composite-run-steps/127611
+        INPUT_TOKEN: ${{ inputs.token }}
+        INPUT_CURRENT_VERSION: ${{ inputs.current_version }}
+        INPUT_NEW_VERSION: ${{ inputs.new_version }}
+        INPUT_PATHS: ${{ inputs.paths }}
+        INPUT_PATTERN: ${{ inputs.pattern }}
+
 branding:
   icon: arrow-up
   color: white
