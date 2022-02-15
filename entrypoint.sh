@@ -24,7 +24,6 @@ fi
 
 git fetch temp_sync_release_version +refs/tags/*:refs/tags/*
 
-FILES=$INPUT_FILES
 NEW_TAG=${INPUT_NEW_VERSION:-"${GITHUB_REF/refs\/tags\//}"}
 CURRENT_TAG=$INPUT_CURRENT_VERSION && exit_status=$? || exit_status=$?
 PATTERN=$INPUT_PATTERN
@@ -45,7 +44,7 @@ else
   echo "::set-output name=is_initial_release::false"
 fi
 
-for path in ${FILES}
+for path in $INPUT_PATHS
 do
    echo "Replacing $CURRENT_TAG with $NEW_TAG for: $path"
    sed -i "s|$PATTERN$CURRENT_TAG|$PATTERN$NEW_TAG|g" "$path"
