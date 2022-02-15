@@ -39,6 +39,7 @@ if [[ $exit_status -ne 0 ]]; then
   echo "::set-output name=is_initial_release::true"
   echo "::set-output name=new_version::$NEW_TAG"
   echo "::set-output name=old_version::$NEW_TAG"
+  git remote remove temp_sync_release_version 2>/dev/null || true
   exit 0;
 else
   echo "::set-output name=is_initial_release::false"
@@ -52,3 +53,5 @@ done
 
 echo "::set-output name=new_version::$NEW_TAG"
 echo "::set-output name=old_version::$CURRENT_TAG"
+
+git remote remove temp_sync_release_version 2>/dev/null || true
