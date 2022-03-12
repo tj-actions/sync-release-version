@@ -27,7 +27,7 @@ jobs:
             test/README.md
             test/subdir/README.md
       - name: Verify Changed files
-        uses: tj-actions/verify-changed-files@v8
+        uses: tj-actions/verify-changed-files@v9
         id: changed_files
         with:
           files: |
