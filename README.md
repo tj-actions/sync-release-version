@@ -45,7 +45,7 @@ Update files that reference a project version with a new release number.
               test/subdir/README.md
 
       - run: |
-        echo "Upgraded from ${{ steps.sync-release-version.outputs.old_version }} -> ${{ steps.sync-release-version.outputs.new_version }}" 
+          echo "Upgraded from ${{ steps.sync-release-version.outputs.old_version }} -> ${{ steps.sync-release-version.outputs.new_version }}" 
 ```
 
 ### Recomended usage with [peter-evans/create-pull-request@v3](https://github.com/peter-evans/create-pull-request)
