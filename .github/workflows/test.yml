@@ -21,8 +21,8 @@ jobs:
         uses: ./
         id: sync-release-version
         with:
-          current_version: '1.0.1'
-          new_version: '1.0.2'
+          current_version: 'v1.0.1'
+          new_version: 'v1.0.2'
           paths: |
             test/README.md
             test/subdir/README.md
@@ -63,8 +63,8 @@ jobs:
         uses: ./
         id: sync-release-version-major
         with:
-          current_version: '1.0.1'
-          new_version: '2.0.0'
+          current_version: 'v1.0.1'
+          new_version: 'v2.0.0'
           only_major: true
           paths: |
             test/README.md

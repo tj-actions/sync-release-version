@@ -38,15 +38,19 @@ if [[ "$INPUT_ONLY_MAJOR" == "true" ]]; then
     echo "Skipping: This will only run on major version release not '$NEW_TAG'.";
     exit 0;
   fi
-fi
 
-for path in $INPUT_PATHS
-do
-   echo "Replacing $CURRENT_TAG with $NEW_TAG for: $path"
-   sed -i "s|$PATTERN$CURRENT_TAG.*|$PATTERN$NEW_TAG|g" "$path"
-done
+  for path in $INPUT_PATHS
+  do
+     echo "Replacing major version $CURRENT_TAG with $NEW_TAG for: $path"
+     sed -i "s|$PATTERN$CURRENT_TAG.*|$PATTERN$NEW_TAG|g" "$path"
+  done
+else
+  for path in $INPUT_PATHS
+  do
+     echo "Replacing $CURRENT_TAG with $NEW_TAG for: $path"
+     sed -i "s|$PATTERN$CURRENT_TAG.*|$PATTERN$NEW_TAG|g" "$path"
+  done
+fi
 
 echo "::set-output name=new_version::$NEW_TAG"
 echo "::set-output name=old_version::$CURRENT_TAG"
-
-git remote remove temp_sync_release_version 2>/dev/null || true
