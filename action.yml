@@ -31,6 +31,9 @@ outputs:
   old_version:
     description: 'The previous project version'
     value: ${{ steps.sync-release-version.outputs.old_version }}
+  major_update:
+    description: 'True if the major version was updated'
+    value: ${{ steps.sync-release-version.outputs.major_update }}
 
 runs:
   using: 'composite'

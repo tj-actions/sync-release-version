@@ -36,15 +36,16 @@ if [[ "$INPUT_ONLY_MAJOR" == "true" ]]; then
 
   if [[ "$NEW_TAG" == "$CURRENT_TAG" ]]; then
     echo "Skipping: This will only run on major version release not '$NEW_TAG'.";
-    exit 0;
+    echo "::set-output name=major_update::false"
+  else
+    for path in $INPUT_PATHS
+    do
+       echo "Replacing major version $CURRENT_TAG with $NEW_TAG for: $path"
+       # Using $PATTERN and $CURRENT_TAG semantic version to replace $NEW_TAG
+       sed -i "s|$PATTERN$CURRENT_TAG.[[:digit:]].[[:digit:]]|$PATTERN$NEW_TAG|g" "$path"
+    done
+    echo "::set-output name=major_update::true"
   fi
-
-  for path in $INPUT_PATHS
-  do
-     echo "Replacing major version $CURRENT_TAG with $NEW_TAG for: $path"
-     # Using $PATTERN and $CURRENT_TAG semantic version to replace $NEW_TAG
-     sed -i "s|$PATTERN$CURRENT_TAG.[[:digit:]].[[:digit:]]|$PATTERN$NEW_TAG|g" "$path"
-  done
 else
   for path in $INPUT_PATHS
   do
