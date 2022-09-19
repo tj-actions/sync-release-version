@@ -1,5 +1,13 @@
 # Changelog
 
+## [v12.2](https://github.com/tj-actions/sync-release-version/tree/v12.2) (2022-09-19)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v12.1...v12.2)
+
+**Merged pull requests:**
+
+- Upgraded to v12.1 [\#152](https://github.com/tj-actions/sync-release-version/pull/152) ([jackton1](https://github.com/jackton1))
+
 ## [v12.1](https://github.com/tj-actions/sync-release-version/tree/v12.1) (2022-09-19)
 
 [Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v12...v12.1)
