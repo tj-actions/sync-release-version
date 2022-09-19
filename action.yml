@@ -19,6 +19,10 @@ inputs:
     description: 'The pattern to match the location that needs to be updated'
     required: false
     default: ''
+  only_major:
+    description: 'Only update the major version'
+    required: false
+    default: 'false'
 
 outputs:
   new_version:
@@ -48,6 +52,7 @@ runs:
         INPUT_NEW_VERSION: ${{ inputs.new_version }}
         INPUT_PATHS: ${{ inputs.paths }}
         INPUT_PATTERN: ${{ inputs.pattern }}
+        INPUT_ONLY_MAJOR: ${{ inputs.only_major }}
 
 branding:
   icon: arrow-up
