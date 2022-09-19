@@ -34,7 +34,7 @@ Update files that reference a project version with a new release number.
           fetch-depth: 0 # otherwise, you will fail to push refs to dest repo
 
       - name: Sync release version.
-        uses: tj-actions/sync-release-version@v12
+        uses: tj-actions/sync-release-version@v13
           id: sync-release-version
           with:
             pattern: 'version='
@@ -66,7 +66,7 @@ jobs:
           fetch-depth: 0
  
       - name: Sync release version.
-        uses: tj-actions/sync-release-version@v12
+        uses: tj-actions/sync-release-version@v13
         id: sync-release-version
         with:
           pattern: 'tj-actions/sync-release-version@'
