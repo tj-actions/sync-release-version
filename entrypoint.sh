@@ -42,13 +42,13 @@ if [[ "$INPUT_ONLY_MAJOR" == "true" ]]; then
   for path in $INPUT_PATHS
   do
      echo "Replacing major version $CURRENT_TAG with $NEW_TAG for: $path"
-     sed -i "s|$PATTERN$CURRENT_TAG.*|$PATTERN$NEW_TAG|g" "$path"
+     sed -i "s|$PATTERN$CURRENT_TAG.*.*|$PATTERN$NEW_TAG|g" "$path"
   done
 else
   for path in $INPUT_PATHS
   do
      echo "Replacing $CURRENT_TAG with $NEW_TAG for: $path"
-     sed -i "s|$PATTERN$CURRENT_TAG.*|$PATTERN$NEW_TAG|g" "$path"
+     sed -i "s|$PATTERN$CURRENT_TAG|$PATTERN$NEW_TAG|g" "$path"
   done
 fi
 
