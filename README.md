@@ -34,12 +34,12 @@ Update files that reference a project version with a new release number.
           fetch-depth: 0 # otherwise, you will fail to push refs to dest repo
 
       - name: Sync release version.
-        uses: tj-actions/sync-release-version@v9
+        uses: tj-actions/sync-release-version@v12
           id: sync-release-version
           with:
             pattern: 'version='
-            current_version: '1.0.1'  # Omit to use git tag.
-            new_version: '1.0.2'  # Omit when running on a release action.
+            current_version: '1.0.1'  # Omit this to use git tag.
+            new_version: '1.0.2'  # Omit this to use git tag.
             paths: |
               README.md
               test/subdir/README.md
@@ -66,7 +66,7 @@ jobs:
           fetch-depth: 0
  
       - name: Sync release version.
-        uses: tj-actions/sync-release-version@v9
+        uses: tj-actions/sync-release-version@v12
         id: sync-release-version
         with:
           pattern: 'tj-actions/sync-release-version@'
