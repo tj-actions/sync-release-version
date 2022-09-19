@@ -1,5 +1,21 @@
 # Changelog
 
+## [Unreleased](https://github.com/tj-actions/sync-release-version/tree/HEAD)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v12.4...HEAD)
+
+**Merged pull requests:**
+
+- Upgraded to v12.3 [\#155](https://github.com/tj-actions/sync-release-version/pull/155) ([jackton1](https://github.com/jackton1))
+
+## [v12.4](https://github.com/tj-actions/sync-release-version/tree/v12.4) (2022-09-19)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v12...v12.4)
+
+## [v12](https://github.com/tj-actions/sync-release-version/tree/v12) (2022-09-19)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v12.3...v12)
+
 ## [v12.3](https://github.com/tj-actions/sync-release-version/tree/v12.3) (2022-09-19)
 
 [Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v12.2...v12.3)
@@ -19,15 +35,7 @@
 
 ## [v12.1](https://github.com/tj-actions/sync-release-version/tree/v12.1) (2022-09-19)
 
-[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v12...v12.1)
-
-**Merged pull requests:**
-
-- Upgraded to v12 [\#151](https://github.com/tj-actions/sync-release-version/pull/151) ([jackton1](https://github.com/jackton1))
-
-## [v12](https://github.com/tj-actions/sync-release-version/tree/v12) (2022-09-19)
-
-[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v11...v12)
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v11...v12.1)
 
 **Fixed bugs:**
 
@@ -39,6 +47,7 @@
 
 **Merged pull requests:**
 
+- Upgraded to v12 [\#151](https://github.com/tj-actions/sync-release-version/pull/151) ([jackton1](https://github.com/jackton1))
 - chore: update test [\#150](https://github.com/tj-actions/sync-release-version/pull/150) ([jackton1](https://github.com/jackton1))
 - feat: added support for syncing only major versions. [\#149](https://github.com/tj-actions/sync-release-version/pull/149) ([jackton1](https://github.com/jackton1))
 - Update tj-actions/github-changelog-generator action to v1.15 [\#148](https://github.com/tj-actions/sync-release-version/pull/148) ([renovate[bot]](https://github.com/apps/renovate))
