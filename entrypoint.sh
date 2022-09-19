@@ -7,22 +7,7 @@ if [[ $GITHUB_EVENT_NAME != 'release' && -z $INPUT_CURRENT_VERSION ]]; then
   exit 0;
 fi
 
-SERVER_URL=$(echo "$GITHUB_SERVER_URL" | awk -F/ '{print $3}')
-
-echo "Setting up 'temp_sync_release_version' remote..."
-
-git ls-remote --exit-code temp_sync_release_version 1>/dev/null 2>&1 && remote_exit_status=$? || remote_exit_status=$?
-
-if [[ $remote_exit_status -ne 0 ]]; then
-  echo "No 'temp_sync_release_version' remote found"
-  echo "Creating 'temp_sync_release_version' remote..."
-  git remote remove temp_sync_release_version 2>/dev/null || true
-  git remote add temp_sync_release_version "https://${INPUT_TOKEN}@${SERVER_URL}/${GITHUB_REPOSITORY}"
-else
-  echo "Found 'temp_changed_files' remote"
-fi
-
-git fetch temp_sync_release_version +refs/tags/*:refs/tags/*
+git fetch origin +refs/tags/*:refs/tags/*
 
 NEW_TAG=${INPUT_NEW_VERSION:-"${GITHUB_REF/refs\/tags\//}"}
 CURRENT_TAG=$INPUT_CURRENT_VERSION && exit_status=$? || exit_status=$?
@@ -43,6 +28,16 @@ if [[ $exit_status -ne 0 ]]; then
   exit 0;
 else
   echo "::set-output name=is_initial_release::false"
+fi
+
+if [[ "$INPUT_ONLY_MAJOR" == "true" ]]; then
+  NEW_TAG=$(echo "$NEW_TAG" | cut -d. -f1)
+  CURRENT_TAG=$(echo "$CURRENT_TAG" | cut -d. -f1)
+
+  if [[ "$NEW_TAG" == "$CURRENT_TAG" ]]; then
+    echo "Skipping: This will only run on major version release not '$NEW_TAG'.";
+    exit 0;
+  fi
 fi
 
 for path in $INPUT_PATHS
