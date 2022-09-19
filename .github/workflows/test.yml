@@ -43,14 +43,14 @@ jobs:
           cat test/subdir/README.md
           exit 1
       - name: Validate old_version output.
-        if: steps.sync-release-version.outputs.old_version != '1.0.1'
+        if: steps.sync-release-version.outputs.old_version != 'v1.0.1'
         run: |
-          echo "Invalid previous version ${{ steps.sync-release-version.outputs.old_version }}: Expected 1.0.1"
+          echo "Invalid previous version ${{ steps.sync-release-version.outputs.old_version }}: Expected v1.0.1"
           exit 1
       - name: Validate new_version output.
-        if: steps.sync-release-version.outputs.new_version != '1.0.2'
+        if: steps.sync-release-version.outputs.new_version != 'v1.0.2'
         run: |
-          echo "Invalid new version ${{ steps.sync-release-version.outputs.new_version }}: Expected 1.0.2"
+          echo "Invalid new version ${{ steps.sync-release-version.outputs.new_version }}: Expected v1.0.2"
           exit 1
             - name: Sync release Version
       - name: Show file changes
@@ -86,12 +86,12 @@ jobs:
           cat test/subdir/README.md
           exit 1
       - name: Validate old_version output.
-        if: steps.sync-release-version-major.outputs.old_version != '1'
+        if: steps.sync-release-version-major.outputs.old_version != 'v1'
         run: |
           echo "Invalid previous version ${{ steps.sync-release-version-major.outputs.old_version }}: Expected 1.0.1"
           exit 1
       - name: Validate new_version output.
-        if: steps.sync-release-version-major.outputs.new_version != '2'
+        if: steps.sync-release-version-major.outputs.new_version != 'v2'
         run: |
           echo "Invalid new version ${{ steps.sync-release-version-major.outputs.new_version }}: Expected 1.0.2"
           exit 1
