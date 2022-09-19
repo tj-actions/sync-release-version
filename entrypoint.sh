@@ -43,7 +43,7 @@ fi
 for path in $INPUT_PATHS
 do
    echo "Replacing $CURRENT_TAG with $NEW_TAG for: $path"
-   sed -i "s|$PATTERN$CURRENT_TAG|$PATTERN$NEW_TAG|g" "$path"
+   sed -i "s|$PATTERN$CURRENT_TAG.*|$PATTERN$NEW_TAG|g" "$path"
 done
 
 echo "::set-output name=new_version::$NEW_TAG"

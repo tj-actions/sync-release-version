@@ -53,6 +53,12 @@ jobs:
           echo "Invalid new version ${{ steps.sync-release-version.outputs.new_version }}: Expected 1.0.2"
           exit 1
             - name: Sync release Version
+      - name: Show file changes
+        run: |
+          echo "test/README.md"
+          cat test/README.md
+          echo "test/subdir/README.md"
+          cat test/subdir/README.md
       - name: Sync release Version Major
         uses: ./
         id: sync-release-version-major
@@ -89,4 +95,10 @@ jobs:
         run: |
           echo "Invalid new version ${{ steps.sync-release-version-major.outputs.new_version }}: Expected 1.0.2"
           exit 1
+      - name: Show file changes
+        run: |
+          echo "test/README.md"
+          cat test/README.md
+          echo "test/subdir/README.md"
+          cat test/subdir/README.md
       
