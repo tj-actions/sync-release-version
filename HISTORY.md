@@ -1,5 +1,60 @@
 # Changelog
 
+## [v12](https://github.com/tj-actions/sync-release-version/tree/v12) (2022-09-19)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v11...v12)
+
+**Fixed bugs:**
+
+- \[BUG\] fatal: unsafe repository  [\#138](https://github.com/tj-actions/sync-release-version/issues/138)
+
+**Closed issues:**
+
+- Dependency Dashboard [\#49](https://github.com/tj-actions/sync-release-version/issues/49)
+
+**Merged pull requests:**
+
+- chore: update test [\#150](https://github.com/tj-actions/sync-release-version/pull/150) ([jackton1](https://github.com/jackton1))
+- feat: added support for syncing only major versions. [\#149](https://github.com/tj-actions/sync-release-version/pull/149) ([jackton1](https://github.com/jackton1))
+- Update tj-actions/github-changelog-generator action to v1.15 [\#148](https://github.com/tj-actions/sync-release-version/pull/148) ([renovate[bot]](https://github.com/apps/renovate))
+- Update tj-actions/verify-changed-files action to v11 [\#147](https://github.com/tj-actions/sync-release-version/pull/147) ([renovate[bot]](https://github.com/apps/renovate))
+- Update peter-evans/create-pull-request action to v4.1.1 [\#146](https://github.com/tj-actions/sync-release-version/pull/146) ([renovate[bot]](https://github.com/apps/renovate))
+- Update peter-evans/create-pull-request action to v4.1.0 [\#145](https://github.com/tj-actions/sync-release-version/pull/145) ([renovate[bot]](https://github.com/apps/renovate))
+- Bump alpine from 3.16.1 to 3.16.2 [\#144](https://github.com/tj-actions/sync-release-version/pull/144) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Update dependency alpine to v3.16.1 [\#143](https://github.com/tj-actions/sync-release-version/pull/143) ([renovate[bot]](https://github.com/apps/renovate))
+- Bump tj-actions/github-changelog-generator from 1.13 to 1.14 [\#142](https://github.com/tj-actions/sync-release-version/pull/142) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Update tj-actions/verify-changed-files action to v10 [\#140](https://github.com/tj-actions/sync-release-version/pull/140) ([renovate[bot]](https://github.com/apps/renovate))
+- Bump codacy/codacy-analysis-cli-action from 4.0.2 to 4.1.0 [\#139](https://github.com/tj-actions/sync-release-version/pull/139) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump peter-evans/create-pull-request from 4.0.3 to 4.0.4 [\#137](https://github.com/tj-actions/sync-release-version/pull/137) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Update dependency alpine to v3.16.0 [\#136](https://github.com/tj-actions/sync-release-version/pull/136) ([renovate[bot]](https://github.com/apps/renovate))
+- Update pascalgn/automerge-action action to v0.15.3 [\#135](https://github.com/tj-actions/sync-release-version/pull/135) ([renovate[bot]](https://github.com/apps/renovate))
+- Update cirrus-actions/rebase action to v1.7 [\#134](https://github.com/tj-actions/sync-release-version/pull/134) ([renovate[bot]](https://github.com/apps/renovate))
+- Update peter-evans/create-pull-request action to v4.0.3 [\#133](https://github.com/tj-actions/sync-release-version/pull/133) ([renovate[bot]](https://github.com/apps/renovate))
+- Update github/codeql-action action to v2 [\#132](https://github.com/tj-actions/sync-release-version/pull/132) ([renovate[bot]](https://github.com/apps/renovate))
+- Update actions/checkout action to v3.0.2 [\#131](https://github.com/tj-actions/sync-release-version/pull/131) ([renovate[bot]](https://github.com/apps/renovate))
+- Update reviewdog/action-shellcheck action to v1.15 [\#130](https://github.com/tj-actions/sync-release-version/pull/130) ([renovate[bot]](https://github.com/apps/renovate))
+- Update cirrus-actions/rebase action to v1.6 [\#129](https://github.com/tj-actions/sync-release-version/pull/129) ([renovate[bot]](https://github.com/apps/renovate))
+- Update actions/checkout action to v3.0.1 [\#128](https://github.com/tj-actions/sync-release-version/pull/128) ([renovate[bot]](https://github.com/apps/renovate))
+- Update peter-evans/create-pull-request action to v4.0.2 [\#127](https://github.com/tj-actions/sync-release-version/pull/127) ([renovate[bot]](https://github.com/apps/renovate))
+- Update dependency alpine to v3.15.4 [\#126](https://github.com/tj-actions/sync-release-version/pull/126) ([renovate[bot]](https://github.com/apps/renovate))
+- Update peter-evans/create-pull-request action to v4.0.1 [\#125](https://github.com/tj-actions/sync-release-version/pull/125) ([renovate[bot]](https://github.com/apps/renovate))
+- Update dependency alpine to v3.15.3 [\#124](https://github.com/tj-actions/sync-release-version/pull/124) ([renovate[bot]](https://github.com/apps/renovate))
+- Update pascalgn/automerge-action action to v0.15.2 [\#123](https://github.com/tj-actions/sync-release-version/pull/123) ([renovate[bot]](https://github.com/apps/renovate))
+- Update dependency alpine to v3.15.2 [\#122](https://github.com/tj-actions/sync-release-version/pull/122) ([renovate[bot]](https://github.com/apps/renovate))
+- Update peter-evans/create-pull-request action [\#121](https://github.com/tj-actions/sync-release-version/pull/121) ([renovate[bot]](https://github.com/apps/renovate))
+- Bump tj-actions/remark from 2.3 to 3 [\#120](https://github.com/tj-actions/sync-release-version/pull/120) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Update dependency alpine to v3.15.1 [\#119](https://github.com/tj-actions/sync-release-version/pull/119) ([renovate[bot]](https://github.com/apps/renovate))
+- Update tj-actions/github-changelog-generator action to v1.13 [\#118](https://github.com/tj-actions/sync-release-version/pull/118) ([renovate[bot]](https://github.com/apps/renovate))
+- Update tj-actions/verify-changed-files action to v9 [\#117](https://github.com/tj-actions/sync-release-version/pull/117) ([renovate[bot]](https://github.com/apps/renovate))
+- Update codacy/codacy-analysis-cli-action action to v4.0.2 [\#116](https://github.com/tj-actions/sync-release-version/pull/116) ([renovate[bot]](https://github.com/apps/renovate))
+- Update codacy/codacy-analysis-cli-action action to v4.0.1 [\#115](https://github.com/tj-actions/sync-release-version/pull/115) ([renovate[bot]](https://github.com/apps/renovate))
+- Update actions/checkout action [\#114](https://github.com/tj-actions/sync-release-version/pull/114) ([renovate[bot]](https://github.com/apps/renovate))
+- Update peter-evans/create-pull-request action to v3.14.0 [\#113](https://github.com/tj-actions/sync-release-version/pull/113) ([renovate[bot]](https://github.com/apps/renovate))
+- Update peter-evans/create-pull-request action to v3.13.0 [\#112](https://github.com/tj-actions/sync-release-version/pull/112) ([renovate[bot]](https://github.com/apps/renovate))
+- Update tj-actions/github-changelog-generator action to v1.12 [\#111](https://github.com/tj-actions/sync-release-version/pull/111) ([renovate[bot]](https://github.com/apps/renovate))
+- Update tj-actions/sync-release-version action to v11 [\#110](https://github.com/tj-actions/sync-release-version/pull/110) ([renovate[bot]](https://github.com/apps/renovate))
+- Upgraded to v11 [\#109](https://github.com/tj-actions/sync-release-version/pull/109) ([jackton1](https://github.com/jackton1))
+
 ## [v11](https://github.com/tj-actions/sync-release-version/tree/v11) (2022-02-15)
 
 [Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v10...v11)
@@ -7,10 +62,6 @@
 ## [v10](https://github.com/tj-actions/sync-release-version/tree/v10) (2022-02-15)
 
 [Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v9...v10)
-
-**Closed issues:**
-
-- Dependency Dashboard [\#49](https://github.com/tj-actions/sync-release-version/issues/49)
 
 **Merged pull requests:**
 
