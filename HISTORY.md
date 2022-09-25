@@ -1,11 +1,23 @@
 # Changelog
 
-## [v13](https://github.com/tj-actions/sync-release-version/tree/v13) (2022-09-19)
+## [v13.1](https://github.com/tj-actions/sync-release-version/tree/v13.1) (2022-09-25)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13...v13.1)
+
+## [v13](https://github.com/tj-actions/sync-release-version/tree/v13) (2022-09-25)
 
 [Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v12.4...v13)
 
+**Closed issues:**
+
+- Dependency Dashboard [\#49](https://github.com/tj-actions/sync-release-version/issues/49)
+
 **Merged pull requests:**
 
+- chore: update pattern [\#160](https://github.com/tj-actions/sync-release-version/pull/160) ([jackton1](https://github.com/jackton1))
+- Update peter-evans/create-pull-request action to v4.1.2 [\#159](https://github.com/tj-actions/sync-release-version/pull/159) ([renovate[bot]](https://github.com/apps/renovate))
+- Update codacy/codacy-analysis-cli-action action to v4.2.0 [\#158](https://github.com/tj-actions/sync-release-version/pull/158) ([renovate[bot]](https://github.com/apps/renovate))
+- Upgraded to v13 [\#157](https://github.com/tj-actions/sync-release-version/pull/157) ([jackton1](https://github.com/jackton1))
 - Upgraded to v12.4 [\#156](https://github.com/tj-actions/sync-release-version/pull/156) ([jackton1](https://github.com/jackton1))
 - Upgraded to v12.3 [\#155](https://github.com/tj-actions/sync-release-version/pull/155) ([jackton1](https://github.com/jackton1))
 
@@ -41,10 +53,6 @@
 **Fixed bugs:**
 
 - \[BUG\] fatal: unsafe repository  [\#138](https://github.com/tj-actions/sync-release-version/issues/138)
-
-**Closed issues:**
-
-- Dependency Dashboard [\#49](https://github.com/tj-actions/sync-release-version/issues/49)
 
 **Merged pull requests:**
 
