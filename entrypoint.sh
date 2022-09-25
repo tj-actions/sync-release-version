@@ -41,7 +41,7 @@ if [[ "$INPUT_ONLY_MAJOR" == "true" ]]; then
     for path in $INPUT_PATHS
     do
        echo "Replacing major version $CURRENT_MAJOR_TAG with $NEW_MAJOR_TAG for: $path"
-       sed -i "s|$PATTERN$CURRENT_MAJOR_TAG.[[:digit:]]\(.[[:digit:]]\)\{0,1\}|$PATTERN$NEW_MAJOR_TAG|g" "$path"
+       sed -i "s|$PATTERN$CURRENT_MAJOR_TAG\(.[[:digit:]]\)\{0,1\}\(.[[:digit:]]\)\{0,1\}|$PATTERN$NEW_MAJOR_TAG|g" "$path"
     done
     echo "::set-output name=major_update::true"
   fi
