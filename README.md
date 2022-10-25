@@ -85,6 +85,7 @@ jobs:
 ```
 
 ## Example
+
 ![Sample](https://user-images.githubusercontent.com/17484350/197892710-7238ba98-fc60-4011-a133-40e1ae1ebf7b.png)
 
 Creating a new release `v6.8 -> v7` using the recommended configuration above.
