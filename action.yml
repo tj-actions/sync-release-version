@@ -48,9 +48,7 @@ runs:
         GITHUB_REF: ${{ github.ref }}
         GITHUB_ACTION_PATH: ${{ github.action_path }}
         GITHUB_EVENT_NAME: ${{ github.event_name }}
-        # INPUT_<VARIABLE_NAME> is not available in Composite run steps
-        # https://github.community/t/input-variable-name-is-not-available-in-composite-run-steps/127611
-        INPUT_TOKEN: ${{ inputs.token }}
+        # https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions#example-specifying-inputs
         INPUT_CURRENT_VERSION: ${{ inputs.current_version }}
         INPUT_NEW_VERSION: ${{ inputs.new_version }}
         INPUT_PATHS: ${{ inputs.paths }}
