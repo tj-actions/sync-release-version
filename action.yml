@@ -21,6 +21,9 @@ inputs:
     default: 'false'
 
 outputs:
+  is_initial_release:
+    description: 'Boolean indicating an initial release.'
+    value: ${{ steps.sync-release-version.outputs.is_initial_release }}
   new_version:
     description: 'The current project version'
     value: ${{ steps.sync-release-version.outputs.new_version }}
@@ -28,7 +31,7 @@ outputs:
     description: 'The previous project version'
     value: ${{ steps.sync-release-version.outputs.old_version }}
   major_update:
-    description: 'True if the major version was updated'
+    description: 'Boolean indicating a major version bump'
     value: ${{ steps.sync-release-version.outputs.major_update }}
 
 runs:
