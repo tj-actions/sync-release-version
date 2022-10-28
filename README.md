@@ -122,13 +122,13 @@ Creating a new release `v6.8 -> v7` using the recommended configuration above.
 
 <!-- AUTO-DOC-INPUT:START - Do not remove or modify this section -->
 
-|      INPUT      |  TYPE  | REQUIRED |  DEFAULT  |                             DESCRIPTION                             |
-|-----------------|--------|----------|-----------|---------------------------------------------------------------------|
-| current\_version | string | false    |           | The current project version (Defualts<br>to: The last git tag).<br> |
-| new\_version     | string | false    |           | The next project version (Defaults<br>to: The new git tag).<br>     |
-| only\_major      | string | false    | `"false"` | Only update the major version<br>number.                            |
-| paths           | string | true     |           | A list of file names<br>to search and replace versions.<br>         |
-| pattern         | string | false    |           | The pattern to match the<br>location that needs to be<br>updated.   |
+|      INPUT      |  TYPE  | REQUIRED |  DEFAULT  |                            DESCRIPTION                            |
+|-----------------|--------|----------|-----------|-------------------------------------------------------------------|
+| current\_version | string | false    |           | The current project version (Defualt:<br>The last git tag).       |
+| new\_version     | string | false    |           | The next project version (Default:<br>The new git tag).           |
+| only\_major      | string | false    | `"false"` | Only update the major version<br>number.                          |
+| paths           | string | true     |           | A list of file names<br>to search and replace versions.<br>       |
+| pattern         | string | false    |           | The pattern to match the<br>location that needs to be<br>updated. |
 
 <!-- AUTO-DOC-INPUT:END -->
 
