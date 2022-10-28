@@ -49,9 +49,11 @@ if [[ "$INPUT_ONLY_MAJOR" == "true" ]]; then
       echo "::set-output name=old_version::$CURRENT_TAG"
       echo "::set-output name=major_update::true"
     else
-      echo "new_version=$NEW_MAJOR_TAG" >> "$GITHUB_OUTPUT"
-      echo "old_version=$CURRENT_TAG" >> "$GITHUB_OUTPUT"
-      echo "major_update=true" >> "$GITHUB_OUTPUT"
+      cat <<EOF >> "$GITHUB_OUTPUT"
+new_version=$NEW_MAJOR_TAG
+old_version=$CURRENT_TAG
+major_update=true
+EOF
     fi
   fi
 else
@@ -66,8 +68,10 @@ else
     echo "::set-output name=old_version::$CURRENT_TAG"
     echo "::set-output name=major_update::false"
   else
-    echo "new_version=$NEW_TAG" >> "$GITHUB_OUTPUT"
-    echo "old_version=$CURRENT_TAG" >> "$GITHUB_OUTPUT"
-    echo "major_update=false" >> "$GITHUB_OUTPUT"
+    cat <<EOF >> "$GITHUB_OUTPUT"
+new_version=$NEW_TAG
+old_version=$CURRENT_TAG
+major_update=true
+EOF
   fi
 fi
