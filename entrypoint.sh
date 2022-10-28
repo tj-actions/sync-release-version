@@ -21,13 +21,27 @@ fi
 if [[ $exit_status -ne 0 ]]; then
   echo "::warning::Initial release detected no updates would be made to specified files."
   echo "::warning::Setting new_version and old_version to $NEW_TAG."
-  echo "::set-output name=is_initial_release::true"
-  echo "::set-output name=new_version::$NEW_TAG"
-  echo "::set-output name=old_version::$NEW_TAG"
+
+  if [[ -z "$GITHUB_OUTPUT" ]]; then
+    echo "::set-output name=is_initial_release::true"
+    echo "::set-output name=new_version::$NEW_TAG"
+    echo "::set-output name=old_version::$NEW_TAG"
+  else
+    cat <<EOF >> "$GITHUB_OUTPUT"
+is_initial_release=true
+new_version=$NEW_TAG
+old_version=$NEW_TAG
+EOF
+  fi
+
   git remote remove temp_sync_release_version 2>/dev/null || true
   exit 0;
 else
-  echo "::set-output name=is_initial_release::false"
+  if [[ -z "$GITHUB_OUTPUT" ]]; then
+    echo "::set-output name=is_initial_release::false"
+  else
+    echo "is_initial_release=false" >> "$GITHUB_OUTPUT"
+  fi
 fi
 
 if [[ "$INPUT_ONLY_MAJOR" == "true" ]]; then
@@ -36,7 +50,11 @@ if [[ "$INPUT_ONLY_MAJOR" == "true" ]]; then
 
   if [[ "$NEW_MAJOR_TAG" == "$CURRENT_MAJOR_TAG" ]]; then
     echo "Skipping: This will only run on major version release not '$NEW_TAG'.";
-    echo "::set-output name=major_update::false"
+    if [[ -z "$GITHUB_OUTPUT" ]]; then
+      echo "::set-output name=major_update::false"
+    else
+      echo "major_update=false" >> "$GITHUB_OUTPUT"
+    fi
   else
     for path in $INPUT_PATHS
     do
