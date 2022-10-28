@@ -120,8 +120,30 @@ Creating a new release `v6.8 -> v7` using the recommended configuration above.
 
 ## Inputs
 
+<!-- AUTO-DOC-INPUT:START - Do not remove or modify this section -->
+
+|      INPUT      |  TYPE  | REQUIRED |  DEFAULT  |                             DESCRIPTION                             |
+|-----------------|--------|----------|-----------|---------------------------------------------------------------------|
+| current\_version | string | false    |           | The current project version (Defualts<br>to: The last git tag).<br> |
+| new\_version     | string | false    |           | The next project version (Defaults<br>to: The new git tag).<br>     |
+| only\_major      | string | false    | `"false"` | Only update the major version<br>number.                            |
+| paths           | string | true     |           | A list of file names<br>to search and replace versions.<br>         |
+| pattern         | string | false    |           | The pattern to match the<br>location that needs to be<br>updated.   |
+
+<!-- AUTO-DOC-INPUT:END -->
+
 ## Outputs
 
+<!-- AUTO-DOC-OUTPUT:START - Do not remove or modify this section -->
+
+|       OUTPUT       |  TYPE  |                DESCRIPTION                 |
+|--------------------|--------|--------------------------------------------|
+| is\_initial\_release | string | Boolean indicating an initial release.<br> |
+| major\_update       | string | Boolean indicating a major version<br>bump |
+| new\_version        | string | The current project version                |
+| old\_version        | string | The previous project version               |
+
+<!-- AUTO-DOC-OUTPUT:END -->
 
 *   Free software: [MIT license](LICENSE)
 
