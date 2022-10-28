@@ -64,8 +64,10 @@ else
   if [[ -z "$GITHUB_OUTPUT" ]]; then
     echo "::set-output name=new_version::$NEW_TAG"
     echo "::set-output name=old_version::$CURRENT_TAG"
+    echo "::set-output name=major_update::false"
   else
     echo "new_version=$NEW_TAG" >> "$GITHUB_OUTPUT"
     echo "old_version=$CURRENT_TAG" >> "$GITHUB_OUTPUT"
+    echo "major_update=false" >> "$GITHUB_OUTPUT"
   fi
 fi
