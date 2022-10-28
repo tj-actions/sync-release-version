@@ -91,9 +91,9 @@ jobs:
           echo "Invalid previous version ${{ steps.sync-release-version-major.outputs.old_version }}: Expected v1.0.1"
           exit 1
       - name: Validate new_version output.
-        if: steps.sync-release-version-major.outputs.new_version != 'v2.0.0'
+        if: steps.sync-release-version-major.outputs.new_version != 'v2'
         run: |
-          echo "Invalid new version ${{ steps.sync-release-version-major.outputs.new_version }}: Expected v2.0.0"
+          echo "Invalid new version ${{ steps.sync-release-version-major.outputs.new_version }}: Expected v2"
           exit 1
       - name: Validate major_update output
         if: steps.sync-release-version-major.outputs.major_update != 'true'
