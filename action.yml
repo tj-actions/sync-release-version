@@ -2,25 +2,21 @@ name: Sync release version.
 description: Update files that reference a project version with new release number.
 author: tj-actions
 inputs:
-  token:
-    description: 'GITHUB_TOKEN or a Repo scoped PAT'
-    required: true
-    default: ${{ github.token }}
   current_version:
-    description: 'The previous project version'
+    description: 'The current project version (Defualts to: The last git tag).'
     required: false
   new_version:
-    description: 'The current project version'
+    description: 'The next project version (Defaults to: The new git tag).'
     required: false
   paths:
     description: 'A list of file names to search and replace versions.'
     required: true
   pattern:
-    description: 'The pattern to match the location that needs to be updated'
+    description: 'The pattern to match the location that needs to be updated.'
     required: false
     default: ''
   only_major:
-    description: 'Only update the major version'
+    description: 'Only update the major version number.'
     required: false
     default: 'false'
 
