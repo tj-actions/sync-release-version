@@ -3,10 +3,10 @@ description: Update files that reference a project version with new release numb
 author: tj-actions
 inputs:
   current_version:
-    description: 'The current project version (Defualts to: The last git tag).'
+    description: 'The current project version (Defualt: The last git tag).'
     required: false
   new_version:
-    description: 'The next project version (Defaults to: The new git tag).'
+    description: 'The next project version (Default: The new git tag).'
     required: false
   paths:
     description: 'A list of file names to search and replace versions.'
