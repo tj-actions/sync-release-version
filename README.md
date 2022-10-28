@@ -120,7 +120,7 @@ Creating a new release `v6.8 -> v7` using the recommended configuration above.
 
 ## Inputs
 
-## Output
+## Outputs
 
 
 *   Free software: [MIT license](LICENSE)
