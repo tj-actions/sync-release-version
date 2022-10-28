@@ -43,7 +43,18 @@ if [[ "$INPUT_ONLY_MAJOR" == "true" ]]; then
        echo "Replacing major version $CURRENT_MAJOR_TAG with $NEW_MAJOR_TAG for: $path"
        sed -i "s|$PATTERN$CURRENT_MAJOR_TAG\(.[[:digit:]]\)\{0,1\}\(.[[:digit:]]\)\{0,1\}|$PATTERN$NEW_MAJOR_TAG|g" "$path"
     done
-    echo "::set-output name=major_update::true"
+
+    if [[ -z "$GITHUB_OUTPUT" ]]; then
+      echo "::set-output name=new_version::$NEW_MAJOR_TAG"
+      echo "::set-output name=old_version::$CURRENT_TAG"
+      echo "::set-output name=major_update::true"
+    else
+      cat <<EOF >> "$GITHUB_OUTPUT"
+new_version=$NEW_MAJOR_TAG
+old_version=$CURRENT_TAG
+major_update=true
+EOF
+    fi
   fi
 else
   for path in $INPUT_PATHS
@@ -51,7 +62,16 @@ else
      echo "Replacing $CURRENT_TAG with $NEW_TAG for: $path"
      sed -i "s|$PATTERN$CURRENT_TAG|$PATTERN$NEW_TAG|g" "$path"
   done
+  
+  if [[ -z "$GITHUB_OUTPUT" ]]; then
+    echo "::set-output name=new_version::$NEW_TAG"
+    echo "::set-output name=old_version::$CURRENT_TAG"
+    echo "::set-output name=major_update::false"
+  else
+    cat <<EOF >> "$GITHUB_OUTPUT"
+new_version=$NEW_TAG
+old_version=$CURRENT_TAG
+major_update=true
+EOF
+  fi
 fi
-
-echo "::set-output name=new_version::$NEW_TAG"
-echo "::set-output name=old_version::$CURRENT_TAG"

@@ -2,29 +2,28 @@ name: Sync release version.
 description: Update files that reference a project version with new release number.
 author: tj-actions
 inputs:
-  token:
-    description: 'GITHUB_TOKEN or a Repo scoped PAT'
-    required: true
-    default: ${{ github.token }}
   current_version:
-    description: 'The previous project version'
+    description: 'The current project version (Defualts to: The last git tag).'
     required: false
   new_version:
-    description: 'The current project version'
+    description: 'The next project version (Defaults to: The new git tag).'
     required: false
   paths:
     description: 'A list of file names to search and replace versions.'
     required: true
   pattern:
-    description: 'The pattern to match the location that needs to be updated'
+    description: 'The pattern to match the location that needs to be updated.'
     required: false
     default: ''
   only_major:
-    description: 'Only update the major version'
+    description: 'Only update the major version number.'
     required: false
     default: 'false'
 
 outputs:
+  is_initial_release:
+    description: 'Boolean indicating an initial release.'
+    value: ${{ steps.sync-release-version.outputs.is_initial_release }}
   new_version:
     description: 'The current project version'
     value: ${{ steps.sync-release-version.outputs.new_version }}
@@ -32,7 +31,7 @@ outputs:
     description: 'The previous project version'
     value: ${{ steps.sync-release-version.outputs.old_version }}
   major_update:
-    description: 'True if the major version was updated'
+    description: 'Boolean indicating a major version bump'
     value: ${{ steps.sync-release-version.outputs.major_update }}
 
 runs:
@@ -48,9 +47,7 @@ runs:
         GITHUB_REF: ${{ github.ref }}
         GITHUB_ACTION_PATH: ${{ github.action_path }}
         GITHUB_EVENT_NAME: ${{ github.event_name }}
-        # INPUT_<VARIABLE_NAME> is not available in Composite run steps
-        # https://github.community/t/input-variable-name-is-not-available-in-composite-run-steps/127611
-        INPUT_TOKEN: ${{ inputs.token }}
+        # https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions#example-specifying-inputs
         INPUT_CURRENT_VERSION: ${{ inputs.current_version }}
         INPUT_NEW_VERSION: ${{ inputs.new_version }}
         INPUT_PATHS: ${{ inputs.paths }}

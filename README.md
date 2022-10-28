@@ -120,22 +120,8 @@ Creating a new release `v6.8 -> v7` using the recommended configuration above.
 
 ## Inputs
 
-|       Input       |   type    | required |        default        |                                                                                                                                                          description                                                                                                                                                          |
-|:-----------------:|:---------:|:--------:|:---------------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-|      `token`      | `string`  |  `true`  | `${{ github.token }}` | [GITHUB\_TOKEN](https://docs.github.com/en/free-pro-team@latest/actions/reference/authentication-in-a-workflow#using-the-github_token-in-a-workflow) <br /> or a repo scoped <br /> [Personal Access Token](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token) |
-| `current_version` | `string`  | `false`  |                       |                                                                                                                              The current project version <br /> (Defualts to: The last git tag)                                                                                                                               |
-|   `new_version`   | `string`  | `false`  |                       |                                                                                                                                The next project version <br /> (Defaults to: The new git tag)                                                                                                                                 |
-|      `paths`      |  `array`  |  `true`  |                       |                                                                                                                                  A list of file names to search <br /> and replace versions.                                                                                                                                  |
-|     `pattern`     | `string`  | `false`  |         `''`          |                                                                                                                               The pattern to match the location <br /> that needs to be updated                                                                                                                               |
-|   `only_major`    | `boolean` | `false`  |        `false`        |                                                                                                                                             Only update the major version number.                                                                                                                                             |
-
 ## Output
 
-|   Output         |    type     |  example              | description                   |
-|:----------------:|:-----------:|:---------------------:|:-----------------------------:|
-| `is_initial_release`    |  `string`   |    `true` OR `false`   |  Boolean string indicating that it's an initial release. |
-| `new_version`    |  `string`   |    `1.2.1`            |  The current project version |
-| `old_version`    |  `string`   |    `1.2.0`            |  The previous project version |
 
 *   Free software: [MIT license](LICENSE)
 
