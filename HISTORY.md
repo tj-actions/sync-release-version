@@ -1,12 +1,22 @@
 # Changelog
 
+## [v13.3](https://github.com/tj-actions/sync-release-version/tree/v13.3) (2022-10-30)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13...v13.3)
+
+## [v13](https://github.com/tj-actions/sync-release-version/tree/v13) (2022-10-30)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13.2...v13)
+
+**Merged pull requests:**
+
+- Updated README.md [\#176](https://github.com/tj-actions/sync-release-version/pull/176) ([jackton1](https://github.com/jackton1))
+- fix: bug with empty output [\#175](https://github.com/tj-actions/sync-release-version/pull/175) ([jackton1](https://github.com/jackton1))
+- Upgraded to v13.2 [\#174](https://github.com/tj-actions/sync-release-version/pull/174) ([jackton1](https://github.com/jackton1))
+
 ## [v13.2](https://github.com/tj-actions/sync-release-version/tree/v13.2) (2022-10-28)
 
-[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13...v13.2)
-
-## [v13](https://github.com/tj-actions/sync-release-version/tree/v13) (2022-10-28)
-
-[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13.1...v13)
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13.1...v13.2)
 
 **Closed issues:**
 
