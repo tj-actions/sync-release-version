@@ -1,12 +1,20 @@
 # Changelog
 
-## [v13.3](https://github.com/tj-actions/sync-release-version/tree/v13.3) (2022-10-30)
+## [v13.4](https://github.com/tj-actions/sync-release-version/tree/v13.4) (2022-10-30)
 
-[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13...v13.3)
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13...v13.4)
 
 ## [v13](https://github.com/tj-actions/sync-release-version/tree/v13) (2022-10-30)
 
-[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13.2...v13)
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13.3...v13)
+
+**Merged pull requests:**
+
+- Upgraded to [\#177](https://github.com/tj-actions/sync-release-version/pull/177) ([jackton1](https://github.com/jackton1))
+
+## [v13.3](https://github.com/tj-actions/sync-release-version/tree/v13.3) (2022-10-30)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13.2...v13.3)
 
 **Merged pull requests:**
 
@@ -39,7 +47,7 @@
 
 ## [v13.1](https://github.com/tj-actions/sync-release-version/tree/v13.1) (2022-09-25)
 
-[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v12.4...v13.1)
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v12...v13.1)
 
 **Merged pull requests:**
 
@@ -50,13 +58,13 @@
 - Upgraded to v12.4 [\#156](https://github.com/tj-actions/sync-release-version/pull/156) ([jackton1](https://github.com/jackton1))
 - Upgraded to v12.3 [\#155](https://github.com/tj-actions/sync-release-version/pull/155) ([jackton1](https://github.com/jackton1))
 
-## [v12.4](https://github.com/tj-actions/sync-release-version/tree/v12.4) (2022-09-19)
-
-[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v12...v12.4)
-
 ## [v12](https://github.com/tj-actions/sync-release-version/tree/v12) (2022-09-19)
 
-[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v12.3...v12)
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v12.4...v12)
+
+## [v12.4](https://github.com/tj-actions/sync-release-version/tree/v12.4) (2022-09-19)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v12.3...v12.4)
 
 ## [v12.3](https://github.com/tj-actions/sync-release-version/tree/v12.3) (2022-09-19)
 
