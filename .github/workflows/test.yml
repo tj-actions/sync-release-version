@@ -52,7 +52,6 @@ jobs:
         run: |
           echo "Invalid new version ${{ steps.sync-release-version.outputs.new_version }}: Expected v1.0.2"
           exit 1
-            - name: Sync release Version
       - name: Show file changes
         run: |
           echo "test/README.md"

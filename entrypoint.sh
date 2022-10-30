@@ -52,8 +52,14 @@ if [[ "$INPUT_ONLY_MAJOR" == "true" ]]; then
     echo "Skipping: This will only run on major version release not '$NEW_TAG'.";
     if [[ -z "$GITHUB_OUTPUT" ]]; then
       echo "::set-output name=major_update::false"
+      echo "::set-output name=new_version::$NEW_MAJOR_TAG"
+      echo "::set-output name=old_version::$CURRENT_TAG"
     else
-      echo "major_update=false" >> "$GITHUB_OUTPUT"
+      cat <<EOF >> "$GITHUB_OUTPUT"
+new_version=$NEW_TAG
+old_version=$CURRENT_TAG
+major_update=false
+EOF
     fi
   else
     for path in $INPUT_PATHS
