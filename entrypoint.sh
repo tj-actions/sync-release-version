@@ -14,7 +14,7 @@ CURRENT_TAG=$INPUT_CURRENT_VERSION && exit_status=$? || exit_status=$?
 PATTERN=$INPUT_PATTERN
 
 if [[ -z "$CURRENT_TAG" ]]; then
-  TAG=$(git describe --abbrev=0 --tags "$(git rev-list --tags --skip=1  --max-count=1 2>&1)" 2>&1) && exit_status=$? || exit_status=$?
+  TAG=$(git tag --sort=-v:refname | grep -vE "^v[0-9]+$" | head -n 1)
   CURRENT_TAG=$TAG
 fi
 
@@ -81,12 +81,17 @@ EOF
     fi
   fi
 else
-  for path in $INPUT_PATHS
-  do
-     echo "Replacing $CURRENT_TAG with $NEW_TAG for: $path"
-     sed -i "s|$PATTERN$CURRENT_TAG|$PATTERN$NEW_TAG|g" "$path"
-  done
-  
+  NEW_MAJOR_TAG=$(echo "$NEW_TAG" | cut -d. -f1)
+  if [[ "$NEW_TAG" == "$NEW_MAJOR_TAG" ]]; then
+    echo "::warning::New version $NEW_TAG is a major version, skipping minor and patch version updates. You can set only_major to true to prevent this warning."
+  else
+    for path in $INPUT_PATHS
+      do
+         echo "Replacing $CURRENT_TAG with $NEW_TAG for: $path"
+         sed -i "s|$PATTERN$CURRENT_TAG|$PATTERN$NEW_TAG|g" "$path"
+      done
+  fi
+
   if [[ -z "$GITHUB_OUTPUT" ]]; then
     echo "::set-output name=new_version::$NEW_TAG"
     echo "::set-output name=old_version::$CURRENT_TAG"
