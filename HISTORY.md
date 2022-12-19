@@ -1,12 +1,36 @@
 # Changelog
 
+## [v13.5](https://github.com/tj-actions/sync-release-version/tree/v13.5) (2022-12-19)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13...v13.5)
+
+## [v13](https://github.com/tj-actions/sync-release-version/tree/v13) (2022-12-19)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13.4...v13)
+
+**Closed issues:**
+
+- Dependency Dashboard [\#49](https://github.com/tj-actions/sync-release-version/issues/49)
+
+**Merged pull requests:**
+
+- fix/exclude major version tags [\#192](https://github.com/tj-actions/sync-release-version/pull/192) ([jackton1](https://github.com/jackton1))
+- Updated README.md [\#191](https://github.com/tj-actions/sync-release-version/pull/191) ([jackton1](https://github.com/jackton1))
+- chore\(deps\): update tj-actions/verify-changed-files action to v13 [\#190](https://github.com/tj-actions/sync-release-version/pull/190) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update tj-actions/auto-doc action to v1.6.0 [\#189](https://github.com/tj-actions/sync-release-version/pull/189) ([renovate[bot]](https://github.com/apps/renovate))
+- Bump cirrus-actions/rebase from 1.7 to 1.8 [\#188](https://github.com/tj-actions/sync-release-version/pull/188) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): update reviewdog/action-shellcheck action to v1.16 [\#186](https://github.com/tj-actions/sync-release-version/pull/186) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update actions/checkout action to v3.2.0 [\#185](https://github.com/tj-actions/sync-release-version/pull/185) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update tj-actions/auto-doc action to v1.5.0 [\#184](https://github.com/tj-actions/sync-release-version/pull/184) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update peter-evans/create-pull-request action to v4.2.3 [\#183](https://github.com/tj-actions/sync-release-version/pull/183) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update peter-evans/create-pull-request action to v4.2.2 [\#182](https://github.com/tj-actions/sync-release-version/pull/182) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update peter-evans/create-pull-request action to v4.2.1 [\#181](https://github.com/tj-actions/sync-release-version/pull/181) ([renovate[bot]](https://github.com/apps/renovate))
+- Bump hmarr/auto-approve-action from 2 to 3 [\#180](https://github.com/tj-actions/sync-release-version/pull/180) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): update tj-actions/auto-doc action to v1.4.3 [\#179](https://github.com/tj-actions/sync-release-version/pull/179) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [v13.4](https://github.com/tj-actions/sync-release-version/tree/v13.4) (2022-10-30)
 
-[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13...v13.4)
-
-## [v13](https://github.com/tj-actions/sync-release-version/tree/v13) (2022-10-30)
-
-[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13.3...v13)
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13.3...v13.4)
 
 **Merged pull requests:**
 
@@ -26,10 +50,6 @@
 
 [Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13.1...v13.2)
 
-**Closed issues:**
-
-- Dependency Dashboard [\#49](https://github.com/tj-actions/sync-release-version/issues/49)
-
 **Merged pull requests:**
 
 - Updated README.md [\#173](https://github.com/tj-actions/sync-release-version/pull/173) ([jackton1](https://github.com/jackton1))
@@ -47,7 +67,7 @@
 
 ## [v13.1](https://github.com/tj-actions/sync-release-version/tree/v13.1) (2022-09-25)
 
-[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v12...v13.1)
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v12.4...v13.1)
 
 **Merged pull requests:**
 
@@ -58,13 +78,13 @@
 - Upgraded to v12.4 [\#156](https://github.com/tj-actions/sync-release-version/pull/156) ([jackton1](https://github.com/jackton1))
 - Upgraded to v12.3 [\#155](https://github.com/tj-actions/sync-release-version/pull/155) ([jackton1](https://github.com/jackton1))
 
-## [v12](https://github.com/tj-actions/sync-release-version/tree/v12) (2022-09-19)
-
-[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v12.4...v12)
-
 ## [v12.4](https://github.com/tj-actions/sync-release-version/tree/v12.4) (2022-09-19)
 
-[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v12.3...v12.4)
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v12...v12.4)
+
+## [v12](https://github.com/tj-actions/sync-release-version/tree/v12) (2022-09-19)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v12.3...v12)
 
 ## [v12.3](https://github.com/tj-actions/sync-release-version/tree/v12.3) (2022-09-19)
 
