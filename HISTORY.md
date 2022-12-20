@@ -1,12 +1,20 @@
 # Changelog
 
+## [v13.6](https://github.com/tj-actions/sync-release-version/tree/v13.6) (2022-12-20)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13...v13.6)
+
+## [v13](https://github.com/tj-actions/sync-release-version/tree/v13) (2022-12-20)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13.5...v13)
+
+**Merged pull requests:**
+
+- Upgraded to v13.5 [\#193](https://github.com/tj-actions/sync-release-version/pull/193) ([jackton1](https://github.com/jackton1))
+
 ## [v13.5](https://github.com/tj-actions/sync-release-version/tree/v13.5) (2022-12-19)
 
-[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13...v13.5)
-
-## [v13](https://github.com/tj-actions/sync-release-version/tree/v13) (2022-12-19)
-
-[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13.4...v13)
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13.4...v13.5)
 
 **Closed issues:**
 
