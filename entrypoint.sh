@@ -14,7 +14,7 @@ CURRENT_TAG=$INPUT_CURRENT_VERSION && exit_status=$? || exit_status=$?
 PATTERN=$INPUT_PATTERN
 
 if [[ -z "$CURRENT_TAG" ]]; then
-  TAG=$(git tag --sort=-v:refname | grep -vE "^v[0-9]+$" | head -n 1)
+  TAG=$(git tag --sort=-v:refname | grep -vE "^v[0-9]+$" | head -n 2 | tail -n 1)
   CURRENT_TAG=$TAG
 fi
 
