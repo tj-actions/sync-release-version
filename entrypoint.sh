@@ -86,10 +86,10 @@ else
     echo "::warning::New version $NEW_TAG is a major version, skipping minor and patch version updates. You can set only_major to true to prevent this warning."
   else
     for path in $INPUT_PATHS
-      do
-         echo "Replacing $CURRENT_TAG with $NEW_TAG for: $path"
-         sed -i "s|$PATTERN$CURRENT_TAG|$PATTERN$NEW_TAG|g" "$path"
-      done
+    do
+       echo "Replacing $CURRENT_TAG with $NEW_TAG for: $path"
+       sed -i "s|$PATTERN$CURRENT_TAG|$PATTERN$NEW_TAG|g" "$path"
+    done
   fi
 
   if [[ -z "$GITHUB_OUTPUT" ]]; then
