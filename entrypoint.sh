@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -e
+set -euo pipefail
 
 if [[ $GITHUB_EVENT_NAME != 'release' && -z $INPUT_CURRENT_VERSION ]]; then
   echo "Skipping: This should only run on release not '$GITHUB_EVENT_NAME'.";
@@ -14,8 +14,7 @@ CURRENT_TAG=$INPUT_CURRENT_VERSION && exit_status=$? || exit_status=$?
 PATTERN=$INPUT_PATTERN
 
 if [[ -z "$CURRENT_TAG" ]]; then
-  TAG=$(git tag --sort=-v:refname | grep -vE "^v[0-9]+$" | head -n 2 | tail -n 1)
-  CURRENT_TAG=$TAG
+  CURRENT_TAG=$(git tag --sort=-v:refname | grep -vE "^v[0-9]+$" | head -n 2 | tail -n 1) && exit_status=$? || exit_status=$?
 fi
 
 if [[ $exit_status -ne 0 ]]; then
