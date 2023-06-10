@@ -32,8 +32,6 @@ new_version=$NEW_TAG
 old_version=$NEW_TAG
 EOF
   fi
-
-  git remote remove temp_sync_release_version 2>/dev/null || true
   exit 0;
 else
   if [[ -z "$GITHUB_OUTPUT" ]]; then
