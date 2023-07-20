@@ -18,8 +18,8 @@ if [[ -z "$CURRENT_TAG" ]]; then
 fi
 
 if [[ -n "$INPUT_STRIP_PREFIX" ]]; then
-  CURRENT_TAG=${CURRENT_TAG#$INPUT_STRIP_PREFIX}
-  NEW_TAG=${NEW_TAG#$INPUT_STRIP_PREFIX}
+  CURRENT_TAG=${CURRENT_TAG#"$INPUT_STRIP_PREFIX"}
+  NEW_TAG=${NEW_TAG#"$INPUT_STRIP_PREFIX"}
 fi
 
 if [[ $exit_status -ne 0 ]]; then
