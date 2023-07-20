@@ -1,16 +1,31 @@
 # Changelog
 
-## [Unreleased](https://github.com/tj-actions/sync-release-version/tree/HEAD)
+## [v13.9](https://github.com/tj-actions/sync-release-version/tree/v13.9) (2023-07-20)
 
-[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13...HEAD)
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13...v13.9)
+
+## [v13](https://github.com/tj-actions/sync-release-version/tree/v13) (2023-07-20)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13.8...v13)
 
 **Closed issues:**
 
 - Dependency Dashboard [\#49](https://github.com/tj-actions/sync-release-version/issues/49)
 
-## [v13](https://github.com/tj-actions/sync-release-version/tree/v13) (2023-06-06)
+**Merged pull requests:**
 
-[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13.8...v13)
+- Updated README.md [\#250](https://github.com/tj-actions/sync-release-version/pull/250) ([tj-actions-bot](https://github.com/tj-actions-bot))
+- feat: add support for strip a prefix from the tag [\#249](https://github.com/tj-actions/sync-release-version/pull/249) ([jackton1](https://github.com/jackton1))
+- Updated README.md [\#248](https://github.com/tj-actions/sync-release-version/pull/248) ([tj-actions-bot](https://github.com/tj-actions-bot))
+- chore\(deps\): update tj-actions/auto-doc action to v2.8.0 [\#247](https://github.com/tj-actions/sync-release-version/pull/247) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update tj-actions/auto-doc action to v2.7.1 [\#246](https://github.com/tj-actions/sync-release-version/pull/246) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update tj-actions/verify-changed-files action to v16 [\#245](https://github.com/tj-actions/sync-release-version/pull/245) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update reviewdog/action-shellcheck action to v1.18 [\#244](https://github.com/tj-actions/sync-release-version/pull/244) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update peter-evans/create-pull-request action to v5.0.2 [\#243](https://github.com/tj-actions/sync-release-version/pull/243) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update tj-actions/verify-changed-files action to v15 [\#242](https://github.com/tj-actions/sync-release-version/pull/242) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update actions/checkout action to v3.5.3 [\#241](https://github.com/tj-actions/sync-release-version/pull/241) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update tj-actions/auto-doc action to v2.7.0 [\#240](https://github.com/tj-actions/sync-release-version/pull/240) ([renovate[bot]](https://github.com/apps/renovate))
+- Upgraded to v13.8 [\#239](https://github.com/tj-actions/sync-release-version/pull/239) ([tj-actions-bot](https://github.com/tj-actions-bot))
 
 ## [v13.8](https://github.com/tj-actions/sync-release-version/tree/v13.8) (2023-06-06)
 
