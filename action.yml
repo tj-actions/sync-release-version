@@ -20,7 +20,7 @@ inputs:
     required: false
     default: 'false'
   strip_prefix:
-    description: 'Prefix to strip from the tag'
+    description: 'Prefix to strip from the tag. For example if `strip_prefix` is set to `v` and the tag is `v1.0.0` the output becomes `1.0.0`.
     required: false
     default: ''
 
