@@ -122,14 +122,14 @@ Creating a new release `v6.8 -> v7` using the recommended configuration above.
 
 <!-- AUTO-DOC-INPUT:START - Do not remove or modify this section -->
 
-|      INPUT      |  TYPE  | REQUIRED |  DEFAULT  |                             DESCRIPTION                              |
-|-----------------|--------|----------|-----------|----------------------------------------------------------------------|
-| current\_version | string |  false   |           |      The current project version (Default: The last git tag).        |
-|   new\_version   | string |  false   |           |        The next project version (Default: The new git tag).          |
-|   only\_major    | string |  false   | `"false"` |              Only update the major version <br>number.               |
-|      paths      | string |   true   |           |      A list of file names <br>to search and replace versions.        |
-|     pattern     | string |  false   |           | The pattern to match the <br>location that needs to be <br>updated.  |
-|  strip\_prefix   | string |  false   |           |                  Prefix to strip from the <br>tag                    |
+|      INPUT      |  TYPE  | REQUIRED |  DEFAULT  |                                                                  DESCRIPTION                                                                   |
+|-----------------|--------|----------|-----------|------------------------------------------------------------------------------------------------------------------------------------------------|
+| current\_version | string |  false   |           |                                           The current project version (Default: The last git tag).                                             |
+|   new\_version   | string |  false   |           |                                             The next project version (Default: The new git tag).                                               |
+|   only\_major    | string |  false   | `"false"` |                                                   Only update the major version <br>number.                                                    |
+|      paths      | string |   true   |           |                                           A list of file names <br>to search and replace versions.                                             |
+|     pattern     | string |  false   |           |                                      The pattern to match the <br>location that needs to be <br>updated.                                       |
+|  strip\_prefix   | string |  false   |           | Prefix to strip from the <br>tag. For example if `strip_prefix` <br>is set to `v` and <br>the tag is `v1.0.0` the <br>output becomes `1.0.0`.  |
 
 <!-- AUTO-DOC-INPUT:END -->
 
