@@ -57,6 +57,7 @@ runs:
         INPUT_PATHS: ${{ inputs.paths }}
         INPUT_PATTERN: ${{ inputs.pattern }}
         INPUT_ONLY_MAJOR: ${{ inputs.only_major }}
+        INPUT_STRIP_PREFIX: ${{ inputs.strip_prefix }}
 
 branding:
   icon: arrow-up
