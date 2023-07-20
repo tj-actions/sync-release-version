@@ -17,6 +17,11 @@ if [[ -z "$CURRENT_TAG" ]]; then
   CURRENT_TAG=$(git tag --sort=-v:refname | grep -vE "^v[0-9]+$" | head -n 2 | tail -n 1) && exit_status=$? || exit_status=$?
 fi
 
+if [[ -n "$INPUT_STRIP_PREFIX" ]]; then
+  CURRENT_TAG=${CURRENT_TAG#$INPUT_STRIP_PREFIX}
+  NEW_TAG=${NEW_TAG#$INPUT_STRIP_PREFIX}
+fi
+
 if [[ $exit_status -ne 0 ]]; then
   echo "::warning::Initial release detected no updates would be made to specified files."
   echo "::warning::Setting new_version and old_version to $NEW_TAG."
