@@ -1,9 +1,9 @@
 name: Sync release version.
-description: Update files that reference a project version with new release number.
+description: Update files that reference a project version with a new release number.
 author: tj-actions
 inputs:
   current_version:
-    description: 'The current project version (Defualt: The last git tag).'
+    description: 'The current project version (Default: The last git tag).'
     required: false
   new_version:
     description: 'The next project version (Default: The new git tag).'
@@ -19,6 +19,10 @@ inputs:
     description: 'Only update the major version number.'
     required: false
     default: 'false'
+  strip_prefix:
+    description: 'Prefix to strip from the tag'
+    required: false
+    default: ''
 
 outputs:
   is_initial_release:
