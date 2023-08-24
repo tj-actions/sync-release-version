@@ -122,14 +122,14 @@ Creating a new release `v6.8 -> v7` using the recommended configuration above.
 
 <!-- AUTO-DOC-INPUT:START - Do not remove or modify this section -->
 
-|      INPUT      |  TYPE  | REQUIRED |  DEFAULT  |                                                                  DESCRIPTION                                                                   |
-|-----------------|--------|----------|-----------|------------------------------------------------------------------------------------------------------------------------------------------------|
-| current\_version | string |  false   |           |                                           The current project version (Default: The last git tag).                                             |
-|   new\_version   | string |  false   |           |                                             The next project version (Default: The new git tag).                                               |
-|   only\_major    | string |  false   | `"false"` |                                                   Only update the major version <br>number.                                                    |
-|      paths      | string |   true   |           |                                           A list of file names <br>to search and replace versions.                                             |
-|     pattern     | string |  false   |           |                                      The pattern to match the <br>location that needs to be <br>updated.                                       |
-|  strip\_prefix   | string |  false   |           | Prefix to strip from the <br>tag. For example if `strip_prefix` <br>is set to `v` and <br>the tag is `v1.0.0` the <br>output becomes `1.0.0`.  |
+|                                     INPUT                                     |  TYPE  | REQUIRED |  DEFAULT  |                                                                  DESCRIPTION                                                                   |
+|-------------------------------------------------------------------------------|--------|----------|-----------|------------------------------------------------------------------------------------------------------------------------------------------------|
+| <a name="input_current_version"></a>[current\_version](#input_current_version) | string |  false   |           |                                           The current project version (Default: The last git tag).                                             |
+|       <a name="input_new_version"></a>[new\_version](#input_new_version)       | string |  false   |           |                                             The next project version (Default: The new git tag).                                               |
+|        <a name="input_only_major"></a>[only\_major](#input_only_major)         | string |  false   | `"false"` |                                                   Only update the major version <br>number.                                                    |
+|                <a name="input_paths"></a>[paths](#input_paths)                | string |   true   |           |                                           A list of file names <br>to search and replace versions.                                             |
+|             <a name="input_pattern"></a>[pattern](#input_pattern)             | string |  false   |           |                                      The pattern to match the <br>location that needs to be <br>updated.                                       |
+|     <a name="input_strip_prefix"></a>[strip\_prefix](#input_strip_prefix)      | string |  false   |           | Prefix to strip from the <br>tag. For example if `strip_prefix` <br>is set to `v` and <br>the tag is `v1.0.0` the <br>output becomes `1.0.0`.  |
 
 <!-- AUTO-DOC-INPUT:END -->
 
@@ -137,12 +137,12 @@ Creating a new release `v6.8 -> v7` using the recommended configuration above.
 
 <!-- AUTO-DOC-OUTPUT:START - Do not remove or modify this section -->
 
-|       OUTPUT       |  TYPE  |                 DESCRIPTION                  |
-|--------------------|--------|----------------------------------------------|
-| is\_initial\_release | string |    Boolean indicating an initial release.    |
-|    major\_update    | string | Boolean indicating a major version <br>bump  |
-|    new\_version     | string |         The current project version          |
-|    old\_version     | string |         The previous project version         |
+|                                          OUTPUT                                          |  TYPE  |                 DESCRIPTION                  |
+|------------------------------------------------------------------------------------------|--------|----------------------------------------------|
+| <a name="output_is_initial_release"></a>[is\_initial\_release](#output_is_initial_release) | string |    Boolean indicating an initial release.    |
+|          <a name="output_major_update"></a>[major\_update](#output_major_update)          | string | Boolean indicating a major version <br>bump  |
+|           <a name="output_new_version"></a>[new\_version](#output_new_version)            | string |         The current project version          |
+|           <a name="output_old_version"></a>[old\_version](#output_old_version)            | string |         The previous project version         |
 
 <!-- AUTO-DOC-OUTPUT:END -->
 
