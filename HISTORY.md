@@ -1,16 +1,30 @@
 # Changelog
 
-## [v13.9](https://github.com/tj-actions/sync-release-version/tree/v13.9) (2023-07-20)
+## [v13.10](https://github.com/tj-actions/sync-release-version/tree/v13.10) (2023-08-31)
 
-[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13...v13.9)
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13...v13.10)
 
-## [v13](https://github.com/tj-actions/sync-release-version/tree/v13) (2023-07-20)
+## [v13](https://github.com/tj-actions/sync-release-version/tree/v13) (2023-08-31)
 
-[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13.8...v13)
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13.9...v13)
 
 **Closed issues:**
 
 - Dependency Dashboard [\#49](https://github.com/tj-actions/sync-release-version/issues/49)
+
+**Merged pull requests:**
+
+- chore: remove deprecated set-output call [\#257](https://github.com/tj-actions/sync-release-version/pull/257) ([jackton1](https://github.com/jackton1))
+- chore\(deps\): update tj-actions/release-tagger action to v4 [\#256](https://github.com/tj-actions/sync-release-version/pull/256) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update actions/checkout action to v3.6.0 [\#255](https://github.com/tj-actions/sync-release-version/pull/255) ([renovate[bot]](https://github.com/apps/renovate))
+- Updated README.md [\#254](https://github.com/tj-actions/sync-release-version/pull/254) ([tj-actions-bot](https://github.com/tj-actions-bot))
+- chore\(deps\): update tj-actions/auto-doc action to v3 [\#253](https://github.com/tj-actions/sync-release-version/pull/253) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update tj-actions/auto-doc action to v2.9.0 [\#252](https://github.com/tj-actions/sync-release-version/pull/252) ([renovate[bot]](https://github.com/apps/renovate))
+- Upgraded to v13.9 [\#251](https://github.com/tj-actions/sync-release-version/pull/251) ([tj-actions-bot](https://github.com/tj-actions-bot))
+
+## [v13.9](https://github.com/tj-actions/sync-release-version/tree/v13.9) (2023-07-20)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13.8...v13.9)
 
 **Merged pull requests:**
 
@@ -153,7 +167,7 @@
 
 ## [v13.1](https://github.com/tj-actions/sync-release-version/tree/v13.1) (2022-09-25)
 
-[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v12...v13.1)
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v12.4...v13.1)
 
 **Merged pull requests:**
 
@@ -164,13 +178,13 @@
 - Upgraded to v12.4 [\#156](https://github.com/tj-actions/sync-release-version/pull/156) ([jackton1](https://github.com/jackton1))
 - Upgraded to v12.3 [\#155](https://github.com/tj-actions/sync-release-version/pull/155) ([jackton1](https://github.com/jackton1))
 
-## [v12](https://github.com/tj-actions/sync-release-version/tree/v12) (2022-09-19)
-
-[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v12.4...v12)
-
 ## [v12.4](https://github.com/tj-actions/sync-release-version/tree/v12.4) (2022-09-19)
 
-[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v12.3...v12.4)
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v12...v12.4)
+
+## [v12](https://github.com/tj-actions/sync-release-version/tree/v12) (2022-09-19)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v12.3...v12)
 
 ## [v12.3](https://github.com/tj-actions/sync-release-version/tree/v12.3) (2022-09-19)
 
