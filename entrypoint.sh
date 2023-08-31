@@ -26,24 +26,14 @@ if [[ $exit_status -ne 0 ]]; then
   echo "::warning::Initial release detected no updates would be made to specified files."
   echo "::warning::Setting new_version and old_version to $NEW_TAG."
 
-  if [[ -z "$GITHUB_OUTPUT" ]]; then
-    echo "::set-output name=is_initial_release::true"
-    echo "::set-output name=new_version::$NEW_TAG"
-    echo "::set-output name=old_version::$NEW_TAG"
-  else
-    cat <<EOF >> "$GITHUB_OUTPUT"
+  cat <<EOF >> "$GITHUB_OUTPUT"
 is_initial_release=true
 new_version=$NEW_TAG
 old_version=$NEW_TAG
 EOF
-  fi
   exit 0;
 else
-  if [[ -z "$GITHUB_OUTPUT" ]]; then
-    echo "::set-output name=is_initial_release::false"
-  else
-    echo "is_initial_release=false" >> "$GITHUB_OUTPUT"
-  fi
+  echo "is_initial_release=false" >> "$GITHUB_OUTPUT"
 fi
 
 if [[ "$INPUT_ONLY_MAJOR" == "true" ]]; then
@@ -52,17 +42,11 @@ if [[ "$INPUT_ONLY_MAJOR" == "true" ]]; then
 
   if [[ "$NEW_MAJOR_TAG" == "$CURRENT_MAJOR_TAG" ]]; then
     echo "Skipping: This will only run on major version release not '$NEW_TAG'.";
-    if [[ -z "$GITHUB_OUTPUT" ]]; then
-      echo "::set-output name=major_update::false"
-      echo "::set-output name=new_version::$NEW_MAJOR_TAG"
-      echo "::set-output name=old_version::$CURRENT_TAG"
-    else
-      cat <<EOF >> "$GITHUB_OUTPUT"
+    cat <<EOF >> "$GITHUB_OUTPUT"
 new_version=$NEW_TAG
 old_version=$CURRENT_TAG
 major_update=false
 EOF
-    fi
   else
     for path in $INPUT_PATHS
     do
@@ -70,17 +54,11 @@ EOF
        sed -i "s|$PATTERN$CURRENT_MAJOR_TAG\(.[[:digit:]]\)\{0,1\}\(.[[:digit:]]\)\{0,1\}|$PATTERN$NEW_MAJOR_TAG|g" "$path"
     done
 
-    if [[ -z "$GITHUB_OUTPUT" ]]; then
-      echo "::set-output name=new_version::$NEW_MAJOR_TAG"
-      echo "::set-output name=old_version::$CURRENT_TAG"
-      echo "::set-output name=major_update::true"
-    else
-      cat <<EOF >> "$GITHUB_OUTPUT"
+    cat <<EOF >> "$GITHUB_OUTPUT"
 new_version=$NEW_MAJOR_TAG
 old_version=$CURRENT_TAG
 major_update=true
 EOF
-    fi
   fi
 else
   NEW_MAJOR_TAG=$(echo "$NEW_TAG" | cut -d. -f1)
@@ -94,15 +72,9 @@ else
     done
   fi
 
-  if [[ -z "$GITHUB_OUTPUT" ]]; then
-    echo "::set-output name=new_version::$NEW_TAG"
-    echo "::set-output name=old_version::$CURRENT_TAG"
-    echo "::set-output name=major_update::false"
-  else
-    cat <<EOF >> "$GITHUB_OUTPUT"
+  cat <<EOF >> "$GITHUB_OUTPUT"
 new_version=$NEW_TAG
 old_version=$CURRENT_TAG
 major_update=true
 EOF
-  fi
 fi
