@@ -22,7 +22,7 @@ With multiple files that need to be updated each time a new released is created.
 
 Update files that reference a project version with a new release number.
 
-> [!NOTE]
+> \[!NOTE]
 >
 > *   This example assumes a post release operation i.e changes are made to a README after a new version is releaased.
 
@@ -162,8 +162,9 @@ If you feel generous and want to show some extra appreciation:
 
 ## Known Limitation
 
-> [!IMPORTANT]
-> *  To ignore certain lines from getting updated ensure the version used doesn't match either the current or previous version.
+> \[!IMPORTANT]
+>
+> *   To ignore certain lines from getting updated ensure the version used doesn't match either the current or previous version.
 
 ## Credits
 
