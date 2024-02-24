@@ -29,7 +29,7 @@ Update files that reference a project version with a new release number.
 ```yaml
 ...
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0 # otherwise, you will fail to push refs to dest repo
 
@@ -61,7 +61,7 @@ jobs:
   update-version:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
  
@@ -97,7 +97,7 @@ Creating a new release `v6.8 -> v7` using the recommended configuration above.
 ```yaml
 ...
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Sync release version.
@@ -111,7 +111,7 @@ Creating a new release `v6.8 -> v7` using the recommended configuration above.
 ```yaml
 ...
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Sync release version.
