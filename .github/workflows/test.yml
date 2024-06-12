@@ -14,7 +14,7 @@ jobs:
     name: Test sync-release-version
     steps:
       - name: Checkout
-        uses: actions/checkout@v4.1.6
+        uses: actions/checkout@v4.1.7
       - name: shellcheck
         uses: reviewdog/action-shellcheck@v1.21
       - name: Sync release Version
