@@ -16,7 +16,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4.1.7
       - name: shellcheck
-        uses: reviewdog/action-shellcheck@v1.24
+        uses: reviewdog/action-shellcheck@v1.25
       - name: Sync release Version
         uses: ./
         id: sync-release-version
