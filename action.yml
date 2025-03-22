@@ -24,7 +24,7 @@ inputs:
     required: false
     default: ''
   use_tag_commit_hash:
-    description: 'When true, uses commit hash in the replacement pattern. For example, replaces [hash] #v1 with [hash] #v2.'
+    description: 'When true, uses commit hash in the replacement pattern. For example, replaces `hash # v1` with `hash # v2`.'
     required: false
     default: 'false'
 
