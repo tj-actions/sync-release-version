@@ -1,16 +1,88 @@
 # Changelog
 
-## [v13.10](https://github.com/tj-actions/sync-release-version/tree/v13.10) (2023-08-31)
+## [v13.12](https://github.com/tj-actions/sync-release-version/tree/v13.12) (2025-03-22)
 
-[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13...v13.10)
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13...v13.12)
 
-## [v13](https://github.com/tj-actions/sync-release-version/tree/v13) (2023-08-31)
+## [v13](https://github.com/tj-actions/sync-release-version/tree/v13) (2025-03-22)
 
-[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13.9...v13)
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13.11...v13)
 
 **Closed issues:**
 
 - Dependency Dashboard [\#49](https://github.com/tj-actions/sync-release-version/issues/49)
+
+**Merged pull requests:**
+
+- fix: Update sync-release-version.yml [\#318](https://github.com/tj-actions/sync-release-version/pull/318) ([jackton1](https://github.com/jackton1))
+- Updated README.md [\#317](https://github.com/tj-actions/sync-release-version/pull/317) ([github-actions[bot]](https://github.com/apps/github-actions))
+- fix: update-readme.yml workflow [\#316](https://github.com/tj-actions/sync-release-version/pull/316) ([jackton1](https://github.com/jackton1))
+- docs: add boidolr as a contributor for doc [\#315](https://github.com/tj-actions/sync-release-version/pull/315) ([allcontributors[bot]](https://github.com/apps/allcontributors))
+- feat: add support for using commit hash in tag replacement pattern [\#314](https://github.com/tj-actions/sync-release-version/pull/314) ([jackton1](https://github.com/jackton1))
+
+## [v13.11](https://github.com/tj-actions/sync-release-version/tree/v13.11) (2025-03-22)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13.10...v13.11)
+
+**Merged pull requests:**
+
+- chore\(deps\): update reviewdog/action-shellcheck action to v1.29 [\#313](https://github.com/tj-actions/sync-release-version/pull/313) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update reviewdog/action-shellcheck action to v1.28 [\#312](https://github.com/tj-actions/sync-release-version/pull/312) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update actions/checkout action to v4.2.2 [\#311](https://github.com/tj-actions/sync-release-version/pull/311) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update actions/checkout action to v4.2.1 [\#310](https://github.com/tj-actions/sync-release-version/pull/310) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update reviewdog/action-shellcheck action to v1.27 [\#309](https://github.com/tj-actions/sync-release-version/pull/309) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update peter-evans/create-pull-request action to v7 [\#308](https://github.com/tj-actions/sync-release-version/pull/308) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update reviewdog/action-shellcheck action to v1.26 [\#307](https://github.com/tj-actions/sync-release-version/pull/307) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update reviewdog/action-shellcheck action to v1.25 [\#306](https://github.com/tj-actions/sync-release-version/pull/306) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update codacy/codacy-analysis-cli-action action to v4.4.5 [\#305](https://github.com/tj-actions/sync-release-version/pull/305) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update codacy/codacy-analysis-cli-action action to v4.4.4 [\#304](https://github.com/tj-actions/sync-release-version/pull/304) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update codacy/codacy-analysis-cli-action action to v4.4.3 [\#303](https://github.com/tj-actions/sync-release-version/pull/303) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update reviewdog/action-shellcheck action to v1.24 [\#302](https://github.com/tj-actions/sync-release-version/pull/302) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update reviewdog/action-shellcheck action to v1.23 [\#301](https://github.com/tj-actions/sync-release-version/pull/301) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update peter-evans/create-pull-request action to v6.1.0 [\#300](https://github.com/tj-actions/sync-release-version/pull/300) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update reviewdog/action-shellcheck action to v1.22 [\#299](https://github.com/tj-actions/sync-release-version/pull/299) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update actions/checkout action to v4.1.7 [\#298](https://github.com/tj-actions/sync-release-version/pull/298) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update reviewdog/action-shellcheck action to v1.21 [\#297](https://github.com/tj-actions/sync-release-version/pull/297) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update actions/checkout action to v4.1.6 [\#296](https://github.com/tj-actions/sync-release-version/pull/296) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update actions/checkout action to v4.1.5 [\#295](https://github.com/tj-actions/sync-release-version/pull/295) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update codacy/codacy-analysis-cli-action action to v4.4.1 [\#294](https://github.com/tj-actions/sync-release-version/pull/294) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update tj-actions/verify-changed-files action to v20 [\#293](https://github.com/tj-actions/sync-release-version/pull/293) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update tj-actions/auto-doc action to v3.5.0 [\#292](https://github.com/tj-actions/sync-release-version/pull/292) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update actions/checkout action to v4.1.4 [\#291](https://github.com/tj-actions/sync-release-version/pull/291) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update peter-evans/create-pull-request action to v6.0.5 [\#290](https://github.com/tj-actions/sync-release-version/pull/290) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update actions/checkout action to v4.1.3 [\#288](https://github.com/tj-actions/sync-release-version/pull/288) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update peter-evans/create-pull-request action to v6.0.4 [\#287](https://github.com/tj-actions/sync-release-version/pull/287) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update peter-evans/create-pull-request action to v6.0.3 [\#286](https://github.com/tj-actions/sync-release-version/pull/286) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update peter-evans/create-pull-request action to v6.0.2 [\#285](https://github.com/tj-actions/sync-release-version/pull/285) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update actions/checkout action to v4.1.2 [\#284](https://github.com/tj-actions/sync-release-version/pull/284) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update reviewdog/action-shellcheck action to v1.20 [\#283](https://github.com/tj-actions/sync-release-version/pull/283) ([renovate[bot]](https://github.com/apps/renovate))
+- Bump tj-actions/verify-changed-files from 18 to 19 [\#282](https://github.com/tj-actions/sync-release-version/pull/282) ([dependabot[bot]](https://github.com/apps/dependabot))
+- docs: update checkout action [\#280](https://github.com/tj-actions/sync-release-version/pull/280) ([boidolr](https://github.com/boidolr))
+- chore\(deps\): update peter-evans/create-pull-request action to v6.0.1 [\#279](https://github.com/tj-actions/sync-release-version/pull/279) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update tj-actions/github-changelog-generator action to v1.20 [\#278](https://github.com/tj-actions/sync-release-version/pull/278) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update codacy/codacy-analysis-cli-action action to v4.4.0 [\#277](https://github.com/tj-actions/sync-release-version/pull/277) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update tj-actions/verify-changed-files action to v18 [\#276](https://github.com/tj-actions/sync-release-version/pull/276) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update peter-evans/create-pull-request action to v6 [\#275](https://github.com/tj-actions/sync-release-version/pull/275) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update tj-actions/auto-doc action to v3.4.1 [\#273](https://github.com/tj-actions/sync-release-version/pull/273) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update tj-actions/verify-changed-files action to v17 [\#272](https://github.com/tj-actions/sync-release-version/pull/272) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update github/codeql-action action to v3 [\#271](https://github.com/tj-actions/sync-release-version/pull/271) ([renovate[bot]](https://github.com/apps/renovate))
+- Updated README.md [\#270](https://github.com/tj-actions/sync-release-version/pull/270) ([tj-actions-bot](https://github.com/tj-actions-bot))
+- chore\(deps\): update tj-actions/auto-doc action to v3.4.0 [\#269](https://github.com/tj-actions/sync-release-version/pull/269) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update tj-actions/auto-doc action to v3.3.0 [\#268](https://github.com/tj-actions/sync-release-version/pull/268) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update tj-actions/auto-doc action to v3.2.1 [\#267](https://github.com/tj-actions/sync-release-version/pull/267) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update tj-actions/auto-doc action to v3.2.0 [\#266](https://github.com/tj-actions/sync-release-version/pull/266) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update tj-actions/auto-doc action to v3.1.1 [\#265](https://github.com/tj-actions/sync-release-version/pull/265) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update actions/checkout action to v4.1.1 [\#264](https://github.com/tj-actions/sync-release-version/pull/264) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update tj-actions/auto-doc action to v3.1.0 [\#263](https://github.com/tj-actions/sync-release-version/pull/263) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update actions/checkout action to v4.1.0 [\#262](https://github.com/tj-actions/sync-release-version/pull/262) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update tj-actions/auto-doc action to v3.0.1 [\#261](https://github.com/tj-actions/sync-release-version/pull/261) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update reviewdog/action-shellcheck action to v1.19 [\#260](https://github.com/tj-actions/sync-release-version/pull/260) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update actions/checkout action to v4 [\#259](https://github.com/tj-actions/sync-release-version/pull/259) ([renovate[bot]](https://github.com/apps/renovate))
+- Upgraded to v13.10 [\#258](https://github.com/tj-actions/sync-release-version/pull/258) ([tj-actions-bot](https://github.com/tj-actions-bot))
+
+## [v13.10](https://github.com/tj-actions/sync-release-version/tree/v13.10) (2023-08-31)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13.9...v13.10)
 
 **Merged pull requests:**
 
