@@ -36,6 +36,17 @@ else
   echo "is_initial_release=false" >> "$GITHUB_OUTPUT"
 fi
 
+# Get commit hash for current tag if use_tag_commit_hash is true
+if [[ "$INPUT_USE_TAG_COMMIT_HASH" == "true" ]]; then
+  CURRENT_COMMIT_HASH=$(git rev-parse "$CURRENT_TAG" 2>/dev/null || git rev-parse HEAD)
+  NEW_COMMIT_HASH=$(git rev-parse "$NEW_TAG" 2>/dev/null || git rev-parse HEAD)
+  CURRENT_PATTERN="$CURRENT_COMMIT_HASH # $CURRENT_TAG"
+  NEW_PATTERN="$NEW_COMMIT_HASH # $NEW_TAG"
+else
+  CURRENT_PATTERN="$PATTERN$CURRENT_TAG"
+  NEW_PATTERN="$PATTERN$NEW_TAG"
+fi
+
 if [[ "$INPUT_ONLY_MAJOR" == "true" ]]; then
   NEW_MAJOR_TAG=$(echo "$NEW_TAG" | cut -d. -f1)
   CURRENT_MAJOR_TAG=$(echo "$CURRENT_TAG" | cut -d. -f1)
@@ -51,7 +62,11 @@ EOF
     for path in $INPUT_PATHS
     do
        echo "Replacing major version $CURRENT_MAJOR_TAG with $NEW_MAJOR_TAG for: $path"
-       sed -i "s|$PATTERN$CURRENT_MAJOR_TAG\(.[[:digit:]]\)\{0,1\}\(.[[:digit:]]\)\{0,1\}|$PATTERN$NEW_MAJOR_TAG|g" "$path"
+       if [[ "$INPUT_USE_TAG_COMMIT_HASH" == "true" ]]; then
+         sed -i "s|$CURRENT_PATTERN|$NEW_PATTERN|g" "$path"
+       else
+         sed -i "s|$PATTERN$CURRENT_MAJOR_TAG\(.[[:digit:]]\)\{0,1\}\(.[[:digit:]]\)\{0,1\}|$PATTERN$NEW_MAJOR_TAG|g" "$path"
+       fi
     done
 
     cat <<EOF >> "$GITHUB_OUTPUT"
@@ -68,7 +83,7 @@ else
     for path in $INPUT_PATHS
     do
        echo "Replacing $CURRENT_TAG with $NEW_TAG for: $path"
-       sed -i "s|$PATTERN$CURRENT_TAG|$PATTERN$NEW_TAG|g" "$path"
+       sed -i "s|$CURRENT_PATTERN|$NEW_PATTERN|g" "$path"
     done
   fi
 
