@@ -23,6 +23,10 @@ inputs:
     description: 'Prefix to strip from the tag. For example if `strip_prefix` is set to `v` and the tag is `v1.0.0` the output becomes `1.0.0`.'
     required: false
     default: ''
+  use_tag_commit_hash:
+    description: 'When true, uses commit hash in the replacement pattern. For example, replaces `hash # v1` with `hash # v2`.'
+    required: false
+    default: 'false'
 
 outputs:
   is_initial_release:
@@ -58,6 +62,7 @@ runs:
         INPUT_PATTERN: ${{ inputs.pattern }}
         INPUT_ONLY_MAJOR: ${{ inputs.only_major }}
         INPUT_STRIP_PREFIX: ${{ inputs.strip_prefix }}
+        INPUT_USE_TAG_COMMIT_HASH: ${{ inputs.use_tag_commit_hash }}
 
 branding:
   icon: arrow-up
