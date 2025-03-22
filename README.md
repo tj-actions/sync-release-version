@@ -4,7 +4,9 @@
 [![Public workflows that use this action.](https://img.shields.io/endpoint?url=https%3A%2F%2Fused-by.vercel.app%2Fapi%2Fgithub-actions%2Fused-by%3Faction%3Dtj-actions%2Fsync-release-version%26badge%3Dtrue)](https://github.com/search?o=desc\&q=tj-actions+sync-release-version+path%3A.github%2Fworkflows+language%3AYAML\&s=\&type=Code)
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ## sync-release-version
@@ -126,14 +128,15 @@ Creating a new release `v6.8 -> v7` using the recommended configuration above.
 
 <!-- AUTO-DOC-INPUT:START - Do not remove or modify this section -->
 
-|                                     INPUT                                     |  TYPE  | REQUIRED |  DEFAULT  |                                                                  DESCRIPTION                                                                   |
-|-------------------------------------------------------------------------------|--------|----------|-----------|------------------------------------------------------------------------------------------------------------------------------------------------|
-| <a name="input_current_version"></a>[current\_version](#input_current_version) | string |  false   |           |                                           The current project version (Default: The last git tag).                                             |
-|       <a name="input_new_version"></a>[new\_version](#input_new_version)       | string |  false   |           |                                             The next project version (Default: The new git tag).                                               |
-|        <a name="input_only_major"></a>[only\_major](#input_only_major)         | string |  false   | `"false"` |                                                   Only update the major version <br>number.                                                    |
-|                <a name="input_paths"></a>[paths](#input_paths)                | string |   true   |           |                                           A list of file names <br>to search and replace versions.                                             |
-|             <a name="input_pattern"></a>[pattern](#input_pattern)             | string |  false   |           |                                      The pattern to match the <br>location that needs to be <br>updated.                                       |
-|     <a name="input_strip_prefix"></a>[strip\_prefix](#input_strip_prefix)      | string |  false   |           | Prefix to strip from the <br>tag. For example if `strip_prefix` <br>is set to `v` and <br>the tag is `v1.0.0` the <br>output becomes `1.0.0`.  |
+|                                           INPUT                                           |  TYPE  | REQUIRED |  DEFAULT  |                                                                  DESCRIPTION                                                                   |
+|-------------------------------------------------------------------------------------------|--------|----------|-----------|------------------------------------------------------------------------------------------------------------------------------------------------|
+|       <a name="input_current_version"></a>[current\_version](#input_current_version)       | string |  false   |           |                                           The current project version (Default: The last git tag).                                             |
+|             <a name="input_new_version"></a>[new\_version](#input_new_version)             | string |  false   |           |                                             The next project version (Default: The new git tag).                                               |
+|              <a name="input_only_major"></a>[only\_major](#input_only_major)               | string |  false   | `"false"` |                                                   Only update the major version <br>number.                                                    |
+|                      <a name="input_paths"></a>[paths](#input_paths)                      | string |   true   |           |                                           A list of file names <br>to search and replace versions.                                             |
+|                   <a name="input_pattern"></a>[pattern](#input_pattern)                   | string |  false   |           |                                      The pattern to match the <br>location that needs to be <br>updated.                                       |
+|           <a name="input_strip_prefix"></a>[strip\_prefix](#input_strip_prefix)            | string |  false   |           | Prefix to strip from the <br>tag. For example if `strip_prefix` <br>is set to `v` and <br>the tag is `v1.0.0` the <br>output becomes `1.0.0`.  |
+| <a name="input_use_tag_commit_hash"></a>[use\_tag\_commit\_hash](#input_use_tag_commit_hash) | string |  false   | `"false"` |              When true, uses commit hash <br>in the replacement pattern. For <br>example, replaces `hash # v1` with `hash # v2`.               |
 
 <!-- AUTO-DOC-INPUT:END -->
 
@@ -189,8 +192,11 @@ If you are reporting a bug, please include:
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+
 <!-- prettier-ignore-start -->
+
 <!-- markdownlint-disable -->
+
 <table>
   <tbody>
     <tr>
@@ -200,6 +206,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 </table>
 
 <!-- markdownlint-restore -->
+
 <!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
