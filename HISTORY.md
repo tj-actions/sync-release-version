@@ -1,12 +1,21 @@
 # Changelog
 
-## [v13.15](https://github.com/tj-actions/sync-release-version/tree/v13.15) (2025-03-23)
+## [v13.16](https://github.com/tj-actions/sync-release-version/tree/v13.16) (2025-03-23)
 
-[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13...v13.15)
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13...v13.16)
 
 ## [v13](https://github.com/tj-actions/sync-release-version/tree/v13) (2025-03-23)
 
-[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13.14...v13)
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13.15...v13)
+
+**Merged pull requests:**
+
+- fix: matching commit hash with major tags [\#327](https://github.com/tj-actions/sync-release-version/pull/327) ([jackton1](https://github.com/jackton1))
+- Upgraded to v13.15 [\#326](https://github.com/tj-actions/sync-release-version/pull/326) ([github-actions[bot]](https://github.com/apps/github-actions))
+
+## [v13.15](https://github.com/tj-actions/sync-release-version/tree/v13.15) (2025-03-23)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13.14...v13.15)
 
 **Merged pull requests:**
 
