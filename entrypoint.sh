@@ -47,12 +47,20 @@ else
   NEW_PATTERN="$PATTERN$NEW_TAG"
 fi
 
-if [[ "$INPUT_ONLY_MAJOR" == "true" && "$INPUT_USE_TAG_COMMIT_HASH" != "true" ]]; then
+if [[ "$INPUT_ONLY_MAJOR" == "true" ]]; then
   NEW_MAJOR_TAG=$(echo "$NEW_TAG" | cut -d. -f1)
   CURRENT_MAJOR_TAG=$(echo "$CURRENT_TAG" | cut -d. -f1)
 
   if [[ "$NEW_MAJOR_TAG" == "$CURRENT_MAJOR_TAG" ]]; then
-    echo "Skipping: This will only run on major version release not '$NEW_TAG'.";
+    if [[ "$INPUT_USE_TAG_COMMIT_HASH" == "true" ]]; then
+      for path in $INPUT_PATHS
+      do
+        echo "Replacing $CURRENT_COMMIT_HASH with $NEW_COMMIT_HASH for: $path"
+        sed -i "s|$CURRENT_PATTERN|$NEW_PATTERN|g" "$path"
+      done
+    else
+      echo "Skipping: This will only run on major version release not '$NEW_TAG'.";
+    fi
     cat <<EOF >> "$GITHUB_OUTPUT"
 new_version=$NEW_TAG
 old_version=$CURRENT_TAG
