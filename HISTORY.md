@@ -1,12 +1,22 @@
 # Changelog
 
+## [v13.13](https://github.com/tj-actions/sync-release-version/tree/v13.13) (2025-03-23)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13...v13.13)
+
+## [v13](https://github.com/tj-actions/sync-release-version/tree/v13) (2025-03-23)
+
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13.12...v13)
+
+**Merged pull requests:**
+
+- fix: update the hash when use tag commit hash is true and only major is also true [\#321](https://github.com/tj-actions/sync-release-version/pull/321) ([jackton1](https://github.com/jackton1))
+- Upgraded to v13.12 [\#320](https://github.com/tj-actions/sync-release-version/pull/320) ([github-actions[bot]](https://github.com/apps/github-actions))
+- Updated README.md [\#319](https://github.com/tj-actions/sync-release-version/pull/319) ([github-actions[bot]](https://github.com/apps/github-actions))
+
 ## [v13.12](https://github.com/tj-actions/sync-release-version/tree/v13.12) (2025-03-22)
 
-[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13...v13.12)
-
-## [v13](https://github.com/tj-actions/sync-release-version/tree/v13) (2025-03-22)
-
-[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13.11...v13)
+[Full Changelog](https://github.com/tj-actions/sync-release-version/compare/v13.11...v13.12)
 
 **Closed issues:**
 
