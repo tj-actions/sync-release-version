@@ -22,6 +22,9 @@ if [[ -n "$INPUT_STRIP_PREFIX" ]]; then
   NEW_TAG=${NEW_TAG#"$INPUT_STRIP_PREFIX"}
 fi
 
+NEW_MAJOR_TAG=$(echo "$NEW_TAG" | cut -d. -f1)
+CURRENT_MAJOR_TAG=$(echo "$CURRENT_TAG" | cut -d. -f1)
+
 if [[ $exit_status -ne 0 ]]; then
   echo "::warning::Initial release detected no updates would be made to specified files."
   echo "::warning::Setting new_version and old_version to $NEW_TAG."
@@ -40,17 +43,20 @@ fi
 if [[ "$INPUT_USE_TAG_COMMIT_HASH" == "true" ]]; then
   CURRENT_COMMIT_HASH=$(git rev-parse "$CURRENT_TAG" 2>/dev/null || git rev-parse HEAD)
   NEW_COMMIT_HASH=$(git rev-parse "$NEW_TAG" 2>/dev/null || git rev-parse HEAD)
-  CURRENT_PATTERN="$CURRENT_COMMIT_HASH # $CURRENT_TAG"
-  NEW_PATTERN="$NEW_COMMIT_HASH # $NEW_TAG"
+
+  if [[ "$INPUT_ONLY_MAJOR" == "true" ]]; then
+    CURRENT_PATTERN="$CURRENT_COMMIT_HASH # $CURRENT_MAJOR_TAG"
+    NEW_PATTERN="$NEW_COMMIT_HASH # $NEW_MAJOR_TAG"
+  else
+    CURRENT_PATTERN="$CURRENT_COMMIT_HASH # $CURRENT_TAG"
+    NEW_PATTERN="$NEW_COMMIT_HASH # $NEW_TAG"
+  fi
 else
   CURRENT_PATTERN="$PATTERN$CURRENT_TAG"
   NEW_PATTERN="$PATTERN$NEW_TAG"
 fi
 
 if [[ "$INPUT_ONLY_MAJOR" == "true" ]]; then
-  NEW_MAJOR_TAG=$(echo "$NEW_TAG" | cut -d. -f1)
-  CURRENT_MAJOR_TAG=$(echo "$CURRENT_TAG" | cut -d. -f1)
-
   if [[ "$NEW_MAJOR_TAG" == "$CURRENT_MAJOR_TAG" ]]; then
     if [[ "$INPUT_USE_TAG_COMMIT_HASH" == "true" ]]; then
       for path in $INPUT_PATHS
@@ -84,7 +90,6 @@ major_update=true
 EOF
   fi
 else
-  NEW_MAJOR_TAG=$(echo "$NEW_TAG" | cut -d. -f1)
   if [[ "$NEW_TAG" == "$NEW_MAJOR_TAG" ]]; then
     echo "::warning::New version $NEW_TAG is a major version, skipping minor and patch version updates. You can set only_major to true to prevent this warning."
   else
