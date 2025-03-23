@@ -47,7 +47,7 @@ else
   NEW_PATTERN="$PATTERN$NEW_TAG"
 fi
 
-if [[ "$INPUT_ONLY_MAJOR" == "true" ]]; then
+if [[ "$INPUT_ONLY_MAJOR" == "true" && "$INPUT_USE_TAG_COMMIT_HASH" != "true" ]]; then
   NEW_MAJOR_TAG=$(echo "$NEW_TAG" | cut -d. -f1)
   CURRENT_MAJOR_TAG=$(echo "$CURRENT_TAG" | cut -d. -f1)
 
