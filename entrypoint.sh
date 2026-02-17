@@ -100,9 +100,15 @@ else
     done
   fi
 
+  if [[ "$NEW_MAJOR_TAG" != "$CURRENT_MAJOR_TAG" ]]; then
+    MAJOR_UPDATE="true"
+  else
+    MAJOR_UPDATE="false"
+  fi
+
   cat <<EOF >> "$GITHUB_OUTPUT"
 new_version=$NEW_TAG
 old_version=$CURRENT_TAG
-major_update=true
+major_update=$MAJOR_UPDATE
 EOF
 fi
